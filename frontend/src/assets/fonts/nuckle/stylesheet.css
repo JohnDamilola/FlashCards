@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'HW Nuckle Trial Hairline';
+    src: url('HWNuckleTrial-Hairline.woff2') format('woff2'),
+        url('HWNuckleTrial-Hairline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Medium.woff2') format('woff2'),
+        url('HWNuckleTrial-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-ExtraLight.woff2') format('woff2'),
+        url('HWNuckleTrial-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Bold.woff2') format('woff2'),
+        url('HWNuckleTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Light.woff2') format('woff2'),
+        url('HWNuckleTrial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Light.woff2') format('woff2'),
+        url('HWNuckleTrial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Medium.woff2') format('woff2'),
+        url('HWNuckleTrial-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Hairline.woff2') format('woff2'),
+        url('HWNuckleTrial-Hairline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-ExtraLight.woff2') format('woff2'),
+        url('HWNuckleTrial-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Bold.woff2') format('woff2'),
+        url('HWNuckleTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Hairline.woff2') format('woff2'),
+        url('HWNuckleTrial-Hairline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Light.woff2') format('woff2'),
+        url('HWNuckleTrial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Bold.woff2') format('woff2'),
+        url('HWNuckleTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-ExtraLight.woff2') format('woff2'),
+        url('HWNuckleTrial-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Medium.woff2') format('woff2'),
+        url('HWNuckleTrial-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Thin.woff2') format('woff2'),
+        url('HWNuckleTrial-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Thin.woff2') format('woff2'),
+        url('HWNuckleTrial-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Regular.woff2') format('woff2'),
+        url('HWNuckleTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Regular.woff2') format('woff2'),
+        url('HWNuckleTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Thin.woff2') format('woff2'),
+        url('HWNuckleTrial-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-SemiBold.woff2') format('woff2'),
+        url('HWNuckleTrial-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-Regular.woff2') format('woff2'),
+        url('HWNuckleTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-SemiBold.woff2') format('woff2'),
+        url('HWNuckleTrial-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HW Nuckle Trial';
+    src: url('HWNuckleTrial-SemiBold.woff2') format('woff2'),
+        url('HWNuckleTrial-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

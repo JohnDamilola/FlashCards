@@ -19,7 +19,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "typeRoots": ["global.d.ts"],
   },
-  "include": ["src", "react-mailchimp-subscribe.d.ts"]
+  "include": ["src", "global.d.ts"]
 }
