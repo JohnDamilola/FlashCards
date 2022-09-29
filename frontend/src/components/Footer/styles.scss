@@ -1,0 +1,93 @@
+.footer {
+    background: #121212;
+    padding: 20px 0px 20px;
+
+    @media (max-width: 767px) { 
+        padding: 25px 30px;
+    }
+
+    .footer-text-p {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: #fff;
+        margin: 0;
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            color: #f2f2f2;
+        }
+    }
+
+    .footer-brand {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 120%;
+        text-decoration: none;
+        color: #f2f2f2;
+        margin-bottom: 40px;
+        font-size: 28px;
+        img {
+            width: 170px;
+        }
+        span {
+            color: #0575E6;
+        }
+    }
+
+    .address-pane {
+        text-align: right;
+        @media (max-width: 991px) { 
+            margin-top: 20px;
+            text-align: left;
+        }
+        .social-icons {
+            gap: 27px;
+            // margin-bottom: 40px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            img {
+                width: 28px;
+                height: 28px;
+            }
+            @media (max-width: 991px) { 
+                justify-content: flex-start;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    
+    h6 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 120%;
+        color: #FFFFFF;
+        opacity: .7;
+        margin-bottom: 22px;
+        @media (max-width: 991px) { 
+            margin-top: 30px;
+        }
+    }
+
+    p, a {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        text-decoration: none;
+        letter-spacing: -0.3px;
+        color: #fff;
+        &:hover {
+            color: #fff;
+        }
+    }
+    a:hover {
+        color: #F8BC3B;
+    }
+}
