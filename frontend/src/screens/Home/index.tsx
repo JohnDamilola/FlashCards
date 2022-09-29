@@ -40,7 +40,7 @@ const Home = () => {
               </div>
             </div>
             <div className='col-md-6'>
-              <img className='img-fluid' src={Main} />
+              <img className='img-fluid' src={Main} alt="laptop with coffee" />
             </div>
           </div>
         </div>
