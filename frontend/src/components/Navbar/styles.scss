@@ -1,4 +1,5 @@
 .navbar {
+    background: #fff;
     .navbar-brand {
         padding: 8px 0px;
         i {
@@ -103,8 +104,8 @@
         border: 2px solid #720b07;
         border-radius: 8px;
         &:hover {
-            background: #334294;
-            border: 2px solid #334294;
+            background: #520b09;
+            border: 2px solid #520b09;
             color: #fff;
         }
         &:focus, &:hover {
