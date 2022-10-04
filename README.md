@@ -4,7 +4,16 @@
 ## Features
 
 
-## Installation
-1. Install the Requirements
+## Technologies
+- React.js
+- JavaScript
+- HTML5
+- CSS
 
-```pip3 install -r requriements/requirements.txt```
+## Usage
+```
+git clone https://github.com/JohnDamilola/FlashCards.git
+cd FlashCards
+npm install
+npm run
+```

@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(233, 236, 239);
+  }
+  
+  .fixed-width-900 {
+    width: 900px;
+  }
+  
+  .fixed-width-700 {
+    width: 700px;
+  }
+  
+  .fixed-width-100 {
+    width: 100px;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(100vw);
+      width: 100%;
+    }
+  
+    to {
+      transform: translateX(0);
+      width: 100%;
+    }
+  }
+  
+  .slideInLeft {
+    animation-duration: 0.5s;
+    animation-name: slideInLeft;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(-100vw);
+      width: 100%;
+    }
+  
+    to {
+      transform: translateX(0);
+      width: 100%;
+    }
+  }
+  
+  .slideInRight {
+    animation-duration: 0.5s;
+    animation-name: slideInRight;
+  }
+  
+  .slide {
+    transition: transform 0.3s;
+  }
+  
+  .slideOutLeft {
+    transform: translateX(-100%);
+  }
+  
+  .slideOutRight {
+    transform: translateX(100%);
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  .rotate{
+    transition: all 0.2s linear;
+  }
+  
+  .rotate.down{
+    transform:rotate(90deg);
+  }
+  
+  .wrap {	
+    overflow: hidden; 
+  }
+  
+  .inner {	                   
+    margin-top: -100%;
+    transition: margin-top 0.5s ease;
+  }
+  
+  .inner.open { 
+    margin-top: 0px;
+  }
