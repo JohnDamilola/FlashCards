@@ -1,36 +1,35 @@
-import { Card } from "antd";
 import "./styles.scss";
 
 const Explore = () => {
   const decks = [
     {
       title: "Biology",
-      description: "",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicidh adiqeiqe.",
       visibility: "public",
     },
     {
       title: "Biology",
-      description: "",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicidh adiqeiqe.",
       visibility: "private",
     },
     {
       title: "Biology",
-      description: "",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicidh adiqeiqe.",
       visibility: "public",
     },
     {
       title: "Biology",
-      description: "",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicidh adiqeiqe.",
       visibility: "public",
     },
     {
       title: "Biology",
-      description: "",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicidh adiqeiqe.",
       visibility: "public",
     },
     {
       title: "Biology",
-      description: "",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicidh adiqeiqe.",
       visibility: "private",
     },
   ];
