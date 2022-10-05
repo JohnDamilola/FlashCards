@@ -1,10 +1,11 @@
 .navbar {
     background: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     .navbar-brand {
         padding: 8px 0px;
         i {
             margin-right: 10px;
-            color: #720b07;
+            color: #221daf;
         }
         img {
             margin-right: 10px;
@@ -18,7 +19,7 @@
         font-weight: 900;
         font-family: 'arial';
         span {
-            color: #720b07;
+            color: #221daf;
         }
         @media (max-width: 767px) {
             font-size: 20px;
@@ -45,7 +46,7 @@
             margin-left: 10px;
         }
         &:hover {
-            color: #720b07;
+            color: #221daf;
         }
     }
     .dropdown-menu-center {
@@ -100,12 +101,12 @@
         font-weight: 500;
         font-family: Inter;
         color: #fff;
-        background: #720b07;
-        border: 2px solid #720b07;
+        background: #221daf;
+        border: 2px solid #221daf;
         border-radius: 8px;
         &:hover {
-            background: #520b09;
-            border: 2px solid #520b09;
+            background: #221daf;
+            border: 2px solid #221daf;
             color: #fff;
         }
         &:focus, &:hover {
@@ -117,7 +118,7 @@
         }
     }
     @media (max-width: 767px) {
-        padding: 5px 10px;
+        padding: 5px 20px;
     }
 }
 .btn {

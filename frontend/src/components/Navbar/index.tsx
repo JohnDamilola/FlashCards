@@ -1,7 +1,7 @@
 import './styles.scss'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({isDashboard}: any) => {
   return (
     <nav className='navbar navbar-expand-lg sticky-top'>
       <div className='container'>
@@ -9,21 +9,41 @@ const Navbar = () => {
           FlashCard
         </Link>
         <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
-          <div className='navbar-nav ml-auto navbar-centers gap-4'>
-            <li className='nav-item'>
-              <Link className='nav-link active' aria-current='page' to='#'>
-                Explore
+          {
+            isDashboard ? (
+            <div className='navbar-nav ml-auto navbar-centers gap-4'>
+              <li className='nav-item'>
+                <Link className='nav-link active' aria-current='page' to='/explore'>
+                  Explore
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link active' aria-current='page' to='/dashboard'>
+                  Your Library
+                </Link>
+              </li>
+              <Link to='/register'>
+                <button className='btn btn-main'>Add Deck</button>
               </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link active' aria-current='page' to='/login'>
-                Login
+            </div>
+            ): (
+              <div className='navbar-nav ml-auto navbar-centers gap-4'>
+              <li className='nav-item'>
+                <Link className='nav-link active' aria-current='page' to='/explore'>
+                  Explore
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link active' aria-current='page' to='/login'>
+                  Login
+                </Link>
+              </li>
+              <Link to='/register'>
+                <button className='btn btn-main'>Register</button>
               </Link>
-            </li>
-            <Link to='/register'>
-              <button className='btn btn-main'>Register</button>
-            </Link>
-          </div>
+            </div>
+            )
+          }
         </div>
       </div>
     </nav>

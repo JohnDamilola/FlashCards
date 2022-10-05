@@ -1,0 +1,96 @@
+.dashboard-commons {
+    padding: 20px 0px;
+    background: #f2f2f2;
+    min-height: calc(100vh - 75px);
+    .flash-card__list {
+        p {
+            font-size: 16px;
+            color: #000;
+        }
+        .flash-card__item {
+            background: #fff;
+            padding: 30px 30px 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            h5 {
+                margin-bottom: 4px;
+                font-weight: 600;
+            }
+            i {
+                font-size: 20px;
+            }
+            p {
+                color: #222;
+                &.description {
+                    font-size: 16px;
+                    margin-bottom: 4px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &.items-count {
+                    font-size: 14px;
+                    font-weight: 800;
+                    color: rgb(46, 46, 45);
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+            .bottom-section {
+                p {
+                    margin-bottom: 0px;
+                    font-size: 14px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.dashboard-page {
+    .welcome-card {
+        background: #221daf;
+        border: none;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-top: 20px;
+        border-radius: 12px;
+        padding: 16px 30px;
+        margin-bottom: 30px;
+        h3 {
+            color: #fff;
+        }
+        p {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.explore-page {
+    .masthead {
+        text-align: center;
+        padding: 70px 0px 30px;
+        h2 {
+            color: #221daf;
+            font-family: 'HW Nuckle Trial';
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        p {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 0px;
+        }
+    }
+
+    .search-pane {
+        input {
+            height: 56px;
+            padding: 0px 30px;
+        }
+    }
+}

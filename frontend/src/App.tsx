@@ -1,8 +1,9 @@
 import AuthLayout from 'layouts/AuthLayout'
+import DashboardLayout from 'layouts/DashboardLayout'
 import HomeLayout from 'layouts/HomeLayout'
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router'
-import { authRoutes, cardRoutes, publicRoutes } from './routes'
+import { authRoutes, dashboardRoutes, publicRoutes } from './routes'
 
 const App = () => {
   const location = useLocation()
@@ -26,8 +27,8 @@ const App = () => {
           ))}
         </Route>
 
-        <Route element={<AuthLayout/>}>
-          {cardRoutes.map(({ path, element }: any, index: number) => (
+        <Route element={<DashboardLayout />}>
+          {dashboardRoutes.map(({ path, element }: any, index: number) => (
             <Route path={path} element={element} key={index} />
           ))}
         </Route>

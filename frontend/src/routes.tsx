@@ -1,7 +1,7 @@
 import Login from 'screens/AuthScreens/Login'
 import Register from 'screens/AuthScreens/Register'
-import Form from 'screens/CardScreens/Form'
-import CardList from 'screens/CardScreens/Cardlist'
+import Dashboard from 'screens/DashboardScreens/Dashboard'
+import Explore from 'screens/DashboardScreens/Explore'
 import Home from 'screens/Home'
 
 const publicRoutes = [
@@ -21,15 +21,30 @@ const authRoutes = [
     element: <Register />,
   }
 ]
-const cardRoutes = [
+// const cardRoutes = [
+//   {
+//     path: '/new-card',
+//     element: <Form/>,
+//   },
+//   {
+//     path: '/cards',
+//     element: <CardList/>,
+//   },
+// ]
+
+const dashboardRoutes = [
   {
-    path: '/new-card',
-    element: <Form/>,
+    path: '/dashboard',
+    element: <Dashboard />,
   },
   {
-    path: '/cards',
-    element: <CardList/>,
+    path: '/deck/:id/:name',
+    element: <div>Hello</div>, // Practice Component
   },
+  {
+    path: '/explore',
+    element: <Explore />,
+  }
 ]
 
-export { authRoutes, publicRoutes, cardRoutes}
+export { authRoutes, publicRoutes, dashboardRoutes }
