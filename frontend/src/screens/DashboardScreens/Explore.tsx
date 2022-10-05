@@ -1,36 +1,43 @@
 import { Card } from "antd";
+import { Link } from 'react-router-dom'
 import "./styles.scss";
 
 const Explore = () => {
   const decks = [
     {
+      id: "1",
       title: "Biology",
-      description: "",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
       visibility: "public",
     },
     {
-      title: "Biology",
-      description: "",
+      id: "2",
+      title: "Computer Science",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
       visibility: "private",
     },
     {
-      title: "Biology",
-      description: "",
+      id: "3",
+      title: "Plilosophy",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
       visibility: "public",
     },
     {
-      title: "Biology",
-      description: "",
+      id: "4",
+      title: "Maths",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
       visibility: "public",
     },
     {
-      title: "Biology",
-      description: "",
+      id: "5",
+      title: "Physics",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
       visibility: "public",
     },
     {
-      title: "Biology",
-      description: "",
+      id: "6",
+      title: "Chemistry",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
       visibility: "private",
     },
   ];
@@ -57,11 +64,14 @@ const Explore = () => {
             <div className="col-md-12">
               <p>Your Library</p>
             </div>
-            {decks.map(({ title, description, visibility }, index) => {
+            {decks.map(({ id, title, description, visibility }, index) => {
               return (
                 <div className="col-md-4">
+                  <Link className='nav-link active' aria-current='page' to={'/deck/:' + id + '/:' + title}>
                   <div className="flash-card__item">
                     <div className="d-flex justify-content-between align-items-center">
+                    <li className='nav-item'>
+                    </li>
                       <h5>{title}</h5>
                       {visibility === "public" ? (
                         <i className="lni lni-world"></i>
@@ -78,6 +88,7 @@ const Explore = () => {
                       <p>Created by you 2 days ago</p>
                     </div>
                   </div>
+                  </Link>
                 </div>
               );
             })}
