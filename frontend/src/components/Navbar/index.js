@@ -1,5 +1,4 @@
 import './styles.scss'
-import Link1 from '../../components/Link'
 import { Link } from 'react-router-dom'
 
 const Navbar = (path) => {
@@ -17,17 +16,18 @@ const Navbar = (path) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link1 text="Cards" path="cards" isActive={path === 'cards'} />
-            </li>
-            <li className="nav-item">
-              <Link1 text="New Card" path="new-card" isActive={path === 'new-card'} />
-            </li>
-            <li className="nav-item">
-              <Link1 text="Practice" path="practice" isActive={path === 'practice'} />
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link active' aria-current='page' to='#'>
+              <Link className='nav-link active' aria-current='page' to='/cards'>
                 Cards
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className='nav-link active' aria-current='page' to='/new-card'>
+                New Card
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className='nav-link active' aria-current='page' to='/practice'>
+               Practice
               </Link>
             </li>
             <li className='nav-item'>

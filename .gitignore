@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+/frontend/public/main.js
+/frontend/package-lock.json
+/yarm.lock
 
 # testing
 /coverage
