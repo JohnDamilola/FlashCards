@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { Fragment } from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,15 +14,16 @@ import { Pagination, Navigation } from "swiper";
 
 export default function Flashcard() {
   return (
-    <>
-      <Swiper
-        pagination={{
-          type: "progressbar",
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
+        <><Fragment>
+      <h1 className="card-title text-center my-3">Title </h1>
+    </Fragment><Swiper
+      pagination={{
+        type: "progressbar",
+      }}
+      navigation={true}
+      modules={[Pagination, Navigation]}
+      className="mySwiper"
+    >
         <SwiperSlide>Slide 1</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
@@ -32,7 +33,6 @@ export default function Flashcard() {
         <SwiperSlide>Slide 7</SwiperSlide>
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-    </>
+      </Swiper></>
   );
 }
