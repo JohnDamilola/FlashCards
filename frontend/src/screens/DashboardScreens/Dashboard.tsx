@@ -1,4 +1,5 @@
 import { Card } from "antd";
+import { Link } from "react-router-dom";
 import "./styles.scss";
 
 const Dashboard = () => {
@@ -66,9 +67,10 @@ const Dashboard = () => {
             <div className="col-md-12">
               <p>Your Library</p>
             </div>
-            {decks.map(({ title, description, visibility }, index) => {
+            {decks.map(({ id, title, description, visibility }, index) => {
               return (
                 <div className="col-md-4">
+                  <Link className='nav-link active' aria-current='page' to={'/deck/:' + id + '/:' + title}>
                   <div className="flash-card__item">
                     <div className="d-flex justify-content-between align-items-center">
                       <h5>{title}</h5>
@@ -85,6 +87,7 @@ const Dashboard = () => {
                       <p>Created by you 2 days ago</p>
                     </div>
                   </div>
+                  </Link>
                 </div>
               );
             })}
