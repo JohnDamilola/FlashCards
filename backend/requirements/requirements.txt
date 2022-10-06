@@ -25,3 +25,4 @@ html5lib==1.0b10
 itsdangerous==0.24
 python-editor==1.0.3
 six==1.10.0
+pyrebase
