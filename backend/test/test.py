@@ -1,11 +1,29 @@
 import sys
 sys.path.append('backend/src')
+import unittest
 import app
-def test_create_deck_route():
-    '''Test the create deck route of our app'''
-    response=app.test_client().post('/deck/create')
-    assert response.status_code==200
-    assert 10==20
+
+class TestApp(unittest.TestCase):
+    def initialize(self):
+        self.app=app.app.test_client()
+    def test_index_route():
+        '''Test the index route of our app'''
+        response=self.app.get('/')
+        assert response.status_code==200
+        assert response.data.decode('utf-8')=='Testing, Flask!'
+
+    def test_index_route_post():
+        '''Test that the post request to the '/' route is not allowed'''
+        response=self.app.post('/')
+        assert response.status_code==405
+
+    def test_create_deck_route():
+        '''Test the create deck route of our app'''
+        response=self.app.post('/deck/create')
+        assert response.status_code==200
+
+if __name=="__main__":
+    unittest.main()
 """
 from unittest import TestCase
 from models import User
@@ -60,5 +78,3 @@ def test_index_route_post():
 
 """
 
-if __name__=="__main__":
-    test_create_deck_route()
