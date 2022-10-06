@@ -22,7 +22,7 @@ class TestApp(unittest.TestCase):
         response=self.app.post('/deck/create')
         assert response.status_code==200
 
-if __name=="__main__":
+if __name__=="__main__":
     unittest.main()
 """
 from unittest import TestCase
