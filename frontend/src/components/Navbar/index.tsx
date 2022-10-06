@@ -1,53 +1,70 @@
-import './styles.scss'
-import { Link } from 'react-router-dom'
+import "./styles.scss";
+import { Link } from "react-router-dom";
 
-const Navbar = ({isDashboard}: any) => {
+const Navbar = ({ isDashboard }: any) => {
   return (
-    <nav className='navbar navbar-expand-lg sticky-top'>
-      <div className='container'>
-        <Link className='navbar-brand' to='/'>
+    <nav className="navbar navbar-expand-lg sticky-top">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
           FlashCard
         </Link>
-        <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
-          {
-            isDashboard ? (
-            <div className='navbar-nav ml-auto navbar-centers gap-4'>
-              <li className='nav-item'>
-                <Link className='nav-link active' aria-current='page' to='/explore'>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          {isDashboard ? (
+            <div className="navbar-nav ml-auto navbar-centers gap-4">
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/explore"
+                >
                   Explore
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link className='nav-link active' aria-current='page' to='/dashboard'>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/dashboard"
+                >
                   Your Library
                 </Link>
               </li>
-              <Link to='/register'>
-                <button className='btn btn-main'>Add Deck</button>
+              <Link to="/create-deck">
+                <button className="btn btn-main">
+                  <i className="lni lni-circle-plus mr-2"></i> 
+                  <span className=''>Create Deck</span>
+                </button>
               </Link>
             </div>
-            ): (
-              <div className='navbar-nav ml-auto navbar-centers gap-4'>
-              <li className='nav-item'>
-                <Link className='nav-link active' aria-current='page' to='/explore'>
+          ) : (
+            <div className="navbar-nav ml-auto navbar-centers gap-4">
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/explore"
+                >
                   Explore
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link className='nav-link active' aria-current='page' to='/login'>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/login"
+                >
                   Login
                 </Link>
               </li>
-              <Link to='/register'>
-                <button className='btn btn-main'>Register</button>
+              <Link to="/register">
+                <button className="btn btn-main">Register</button>
               </Link>
             </div>
-            )
-          }
+          )}
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
