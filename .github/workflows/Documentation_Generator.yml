@@ -1,0 +1,20 @@
+name: Documentation Generator
+
+on:
+    push:
+        branches: ["main"]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - run: pip install -U sphinx
+            - run: chmod u+x Documentation
+            - run: sphinx-build -b html . Documentation
+            - run: git add -A
+            - run: git config --global user.email "aadiasba@ncsu.edu"
+            - run: git config --global user.name "Aaron Dias Barreto"
+            - run: git commit -m "Doco Auto Generated" -a | exit 0
+            - name: Push Changes
+              uses: ad-m/github-push-action@master
