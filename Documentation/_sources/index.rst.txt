@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Project's documentation!
+Welcome to FlashCard's documentation!
 ===================================
 
 .. toctree::
@@ -13,20 +13,6 @@ Welcome to Project's documentation!
 .. automodule:: numeric
    :members:
 
-.. automodule:: Sym
-   :members:
-
-.. automodule:: Row
-   :members:
-
-.. automodule:: Data
-   :members:
-
-.. automodule:: Cols
-   :members:
-
-.. automodule:: csv_parser
-   :members:
 
 
 Indices and tables
