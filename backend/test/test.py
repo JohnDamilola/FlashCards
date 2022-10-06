@@ -1,3 +1,4 @@
+"""
 from unittest import TestCase
 from models import User
 from api import app
@@ -21,15 +22,15 @@ def test_multiple_users():
 def test_login(client):
     '''Test that a registered user is able to login'''
     with client:
-        response=self.client.post('login',{username:'TestUser', password:'TestPassword'})
+        response=client.post('login',{username:'TestUser', password:'TestPassword'})
         assert current_user.username=='TestUser'
 
 def test_login_wrong_password(client):
     '''Test that an unregistered user is not able to login or that an user is not able to login with a wrong password'''
     with client:
-        response=self.client.post('login',{username:'TestUser', password:'WrongPassword'})
+        response=client.post('login',{username:'TestUser', password:'WrongPassword'})
         assert current_user.username!='TestUser'
-        response==self.client.post('login',{username:'UnRegisteredUser', password:'Random'})
+        response==client.post('login',{username:'UnRegisteredUser', password:'Random'})
         assert current_user.username!='UnRegisteredUser'
 
 def test_logout_redirect(client):
@@ -49,3 +50,4 @@ def test_index_route_post():
     response=app.test_client().post('/')
     assert response.status_code==405
 
+"""
