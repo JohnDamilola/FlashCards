@@ -19,3 +19,11 @@
 1. Install the Requirements
 
 ```pip3 install -r requriements/requirements.txt```
+
+## Authors 
+
+1. [Kritika Javali](https://github.com/ksjavali)
+2. [Swarangi Gaurkar](https://github.com/Swarangigaurkar)
+3. [Aaron Dias Barreto](https://github.com/aaron278)
+4. [Leo Hsiang](https://github.com/leoohsiang)
+5. [Damilola Babalola](https://github.com/JohnDamilola)
