@@ -10,10 +10,11 @@ Welcome to FlashCard's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. automodule:: numeric
+.. automodule:: app
    :members:
 
-
+.. automodule:: login
+   :members:
 
 Indices and tables
 ==================
