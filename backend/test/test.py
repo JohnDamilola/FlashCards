@@ -1,3 +1,10 @@
+import sys
+sys.path.append('src')
+import app
+def test_create_deck_route():
+    '''Test the create deck route of our app'''
+    response=app.test_client().post('/deck/create')
+    assert response.status_code==200
 """
 from unittest import TestCase
 from models import User
