@@ -61,4 +61,4 @@ def test_index_route_post():
 """
 
 if __name__=="__main__":
-    test_ create_deck_route()
+    test_create_deck_route()
