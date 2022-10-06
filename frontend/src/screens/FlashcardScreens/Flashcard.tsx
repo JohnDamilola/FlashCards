@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -24,7 +24,16 @@ export default function Flashcard() {
       modules={[Pagination, Navigation]}
       className="mySwiper"
     >
-        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide className="flip-card">
+          <div className= "flip-card-inner">
+            <div className="flip-card-front center">
+                Slide 1 Front
+            </div>
+            <div className="flip-card-back center">
+                Slide 1 Back
+            </div>
+         </div>
+        </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
