@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Project'
-copyright = '2022, Author'
-author = 'Author'
+project = 'Flash Cards'
+copyright = '2022, John Damilola, Leo Hsiang, Swarangi Gaurkar, Kritka Javali, Aaron Dias Barreto'
+author = 'John Damilola, Leo Hsiang, Swarangi Gaurkar, Kritika Javali, Aaron Dias Barreto'
 
 version = '1'
 release = '1'
@@ -18,7 +18,8 @@ release = '1'
 
 import sys, os
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(1, os.path.abspath('src'))
+sys.path.insert(1, os.path.abspath('frontend'))
+sys.path.insert(2, os.path.abspath('backend'))
 extensions = ['sphinx.ext.autodoc']
 
 #templates_path = ['_templates']
