@@ -59,3 +59,6 @@ def test_index_route_post():
     assert response.status_code==405
 
 """
+
+if __name__=="__main__":
+    test_ create_deck_route()
