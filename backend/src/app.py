@@ -20,8 +20,10 @@ from flask import *
 app = Flask(__name__)
 
 @app.route('/', methods = ['GET'])
-def base():
-    return render_template('index.html')
+def getdecks():
+    decks = db.child("deck").get()
+    d = decks.val()
+    return render_template('index.html',tt=d.values())
 
 @app.route('/deck/create', methods = ['POST'])
 def create():
