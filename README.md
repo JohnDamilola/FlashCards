@@ -27,3 +27,6 @@
 3. [Aaron Dias Barreto](https://github.com/aaron278)
 4. [Leo Hsiang](https://github.com/leoohsiang)
 5. [Damilola Babalola](https://github.com/JohnDamilola)
+
+## License
+[MIT](https://tldrlegal.com/license/mit-license)
