@@ -1,5 +1,5 @@
 import sys
-sys.path.append('src')
+sys.path.append('backend/src')
 import app
 def test_create_deck_route():
     '''Test the create deck route of our app'''
