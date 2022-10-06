@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If the code for this repository is used, please cite it as below"
+authors:
+- family-names: "Javali"
+  given-names: "Kritika"
+- family-names: "Gaurkar"
+  given-names: "Swarangi"
+- family-names: "Dias Barreto"
+  given-names: "Aaron"
+- family-names: "Hsiang"
+  given-names: "Leo" 
+- family-names: "Babalola"
+  given-names: "Damilola" 
+title: "Flash Cards"
+version: 1.0
+doi: 10.5281/zenodo.7113667
+date-released: 2022-09-26
+url: "https://github.com/JohnDamilola/FlashCards"
