@@ -1,6 +1,7 @@
 import './styles.scss'
 import { ReactComponent as CustomizeIcon } from 'assets/icons/icon.svg'
 import Main from 'assets/images/mh.svg'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
@@ -35,8 +36,12 @@ const Home = () => {
               <h1>A spaced repetition learning platform</h1>
               <p>Create, memorize and share your knowledge list as flashcards.</p>
               <div className='btn-flex mt-4'>
-                <button className='btn btn-main'>Get started for free</button>
-                <button className='btn btn-outline'>Explore public cards</button>
+                <Link to='/register'>
+                  <button className='btn btn-main'>Get started for free</button>
+                </Link>
+                <Link to='/explore'>
+                  <button className='btn btn-outline'>Explore public cards</button>
+                </Link>
               </div>
             </div>
             <div className='col-md-6'>

@@ -29,13 +29,56 @@ label {
 
 .btn-main {
   background: #000;
+  border: 2px solid #000;
   border-radius: 8px;
   padding: 10px 20px;
   height: 48px;
   font-size: 16px;
   color: #fff;
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+.btn {
+  height: 48px;
+  border-radius: 8px;
 }
 
 .btn-block {
   width: 100%;
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.ant-btn-primary {
+  background: #221daf !important;
+  border-color: #221daf !important;
+}
+
+.ant-btn-default {
+  border-color: #221daf !important;
+  &:hover {
+    border-color: #221daf !important;
+    color: #221daf !important;
+  }
+}
+
+.text-danger {
+  color: crimson;
+}
+
+.text-edit {
+  color: #221daf;
 }
