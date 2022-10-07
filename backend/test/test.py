@@ -9,17 +9,20 @@ class TestApp(unittest.TestCase):
     def test_index_route(self):
         '''Test the index route of our app'''
         response=self.app.get('/')
+        print(response.status_code)
         assert response.status_code==200
         assert response.data.decode('utf-8')=='Testing, Flask!'
 
     def test_index_route_post(self):
         '''Test that the post request to the '/' route is not allowed'''
         response=self.app.post('/')
+        print(response.status_code)
         assert response.status_code==405
 
     def test_create_deck_route(self):
         '''Test the create deck route of our app'''
         response=self.app.post('/deck/create')
+        print(response.status_code)
         assert response.status_code==200
 
 if __name__=="__main__":
