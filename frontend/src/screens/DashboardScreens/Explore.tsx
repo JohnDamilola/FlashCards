@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import "./styles.scss";
+import React,{useState, useEffect} from 'react';
+import axios from 'axios';
+
 
 const Explore = () => {
   const decks = [
@@ -46,6 +49,7 @@ const Explore = () => {
       visibility: "private",
     },
   ];
+  const [query, setQuery] = useState("")
   return (
     <div className="explore-page dashboard-commons">
       <section>
@@ -54,7 +58,6 @@ const Explore = () => {
             <div className="col-md-12">
               <div className="masthead">
                 <h2>Find step-by-step expert solutions</h2>
-                <p>Millions of solutions for your toughest homework problems</p>
               </div>
             </div>
           </div>
@@ -62,17 +65,21 @@ const Explore = () => {
           <div className="row search-pane justify-content-center">
             <div className="col-md-9">
               <input
+                type="text" onChange={event => setQuery(event.target.value)}
                 className="form-control"
                 placeholder="Search subjects, decks or cards"
               />
-            </div>
-          </div>
-
           <div className="flash-card__list row mt-4">
             <div className="col-md-12">
               <p>Your Library</p>
             </div>
-            {decks.map(({ id, title, description, visibility }, index) => {
+            {decks.filter(post => {
+              if (query === '') {
+                return post;
+              } else if (post.title.toLowerCase().includes(query.toLowerCase()) || post.description.toLowerCase().includes(query.toLowerCase())) {
+                return post;
+              }
+            }).map(({ id, title, description, visibility }, index) => {
               return (
                 <div className="col-md-4">
                   <Link aria-current="page" to={"/deck/" + id + "/" + title}>
@@ -96,6 +103,8 @@ const Explore = () => {
                 </div>
               );
             })}
+          </div>
+          </div>
           </div>
         </div>
       </section>
