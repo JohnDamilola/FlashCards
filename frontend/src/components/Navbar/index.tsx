@@ -6,7 +6,7 @@ const Navbar = ({ isDashboard }: any) => {
     <nav className="navbar navbar-expand-lg sticky-top">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          FlashCard
+          <img className='img-fluid' src={require('assets/images/logo.png')} />
         </Link>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           {isDashboard ? (
