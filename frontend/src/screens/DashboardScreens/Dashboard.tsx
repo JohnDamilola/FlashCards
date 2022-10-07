@@ -7,7 +7,7 @@ import http from "utils/api";
 import "./styles.scss";
 
 interface Deck {
-  id: string;
+  userId: string;
   title: string;
   description: string;
   visibility: string;
@@ -87,7 +87,7 @@ const Dashboard = () => {
                   </div>
               </div>
             ) : (
-              decks.map(({ id, title, description, visibility }, index) => {
+              decks.map(({ userId: id, title, description, visibility }, index) => {
                 return (
                   <div className="col-md-4">
                     <div className="flash-card__item">
