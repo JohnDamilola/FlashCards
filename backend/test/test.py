@@ -4,7 +4,7 @@ import unittest
 import app
 
 class TestApp(unittest.TestCase):
-    def initialize(self):
+    def setUp(self):
         self.app=app.app.test_client()
     def test_index_route(self):
         '''Test the index route of our app'''
