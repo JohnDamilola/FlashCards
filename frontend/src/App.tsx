@@ -3,7 +3,7 @@ import DashboardLayout from 'layouts/DashboardLayout'
 import HomeLayout from 'layouts/HomeLayout'
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router'
-import { authRoutes, dashboardRoutes, publicRoutes, FlashcardRoutes } from './routes'
+import { authRoutes, dashboardRoutes, publicRoutes } from './routes'
 import "swiper/css/bundle";
 
 const App = () => {
@@ -30,12 +30,6 @@ const App = () => {
 
         <Route element={<DashboardLayout />}>
           {dashboardRoutes.map(({ path, element }: any, index: number) => (
-            <Route path={path} element={element} key={index} />
-          ))}
-        </Route>
-
-        <Route element={<DashboardLayout/>}>
-          {FlashcardRoutes.map(({ path, element }: any, index: number) => (
             <Route path={path} element={element} key={index} />
           ))}
         </Route>

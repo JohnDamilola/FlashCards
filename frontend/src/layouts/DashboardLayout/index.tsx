@@ -3,10 +3,10 @@ import { Navigate, Outlet } from 'react-router-dom'
 import './styles.scss'
 
 const DashboardLayout = () => {
-  // const accessToken = window.localStorage.getItem('accessToken')
-  const accessToken = true;
+  const flashCardUser = window.localStorage.getItem('flashCardUser');
+  const isAuth = flashCardUser && JSON.parse(flashCardUser) ? true : false;
 
-  if (!accessToken) {
+  if (!isAuth) {
     return <Navigate to='/login' replace />
   }
 

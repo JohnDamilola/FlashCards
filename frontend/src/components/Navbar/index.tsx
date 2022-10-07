@@ -20,15 +20,6 @@ const Navbar = ({ isDashboard }: any) => {
                   Explore
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  aria-current="page"
-                  to="/dashboard"
-                >
-                  Your Library
-                </Link>
-              </li>
               <Link to="/create-deck">
                 <button className="btn btn-main">
                   <i className="lni lni-circle-plus mr-2"></i> 

@@ -1,65 +1,24 @@
 import { Card, Popconfirm } from "antd";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import EmptyImg from 'assets/images/empty.svg'
 import { PropagateLoader } from "react-spinners";
 import http from "utils/api";
 import "./styles.scss";
 
 interface Deck {
-  id: string;
+  userId: string;
   title: string;
   description: string;
   visibility: string;
 }
 
 const Dashboard = () => {
-  const _decks = [
-    {
-      id: "1",
-      title: "Biology",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
-      visibility: "public",
-    },
-    {
-      id: "2",
-      title: "Computer Science",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
-      visibility: "private",
-    },
-    {
-      id: "3",
-      title: "Plilosophy",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
-      visibility: "public",
-    },
-    {
-      id: "4",
-      title: "Maths",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
-      visibility: "public",
-    },
-    {
-      id: "5",
-      title: "Physics",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
-      visibility: "public",
-    },
-    {
-      id: "6",
-      title: "Chemistry",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae veritatis.",
-      visibility: "private",
-    },
-  ];
-
   const [decks, setDecks] = useState<Deck[]>([]);
   const [fetchingDecks, setFetchingDecks] = useState(false);
+
+  const flashCardUser = window.localStorage.getItem("flashCardUser");
+  const { localId } = (flashCardUser && JSON.parse(flashCardUser)) || {};
 
   useEffect(() => {
     fetchDecks();
@@ -67,14 +26,18 @@ const Dashboard = () => {
 
   const fetchDecks = async () => {
     setFetchingDecks(true);
+    const params = { localId };
     await http
-      .get("/decks")
+      .get("/deck/all", {
+        params,
+      })
       .then((res) => {
+        const { decks: _decks } = res.data || {};
         setDecks(_decks);
         setFetchingDecks(false);
       })
       .catch((err) => {
-        setDecks(_decks);
+        setDecks([]);
         setFetchingDecks(false);
       });
   };
@@ -96,7 +59,8 @@ const Dashboard = () => {
                       <b>Welcome Back,</b> John 👋
                     </h3>
                     <p className="">
-                        Let's start creating, memorizing and sharing your flashcards.
+                      Let's start creating, memorizing and sharing your
+                      flashcards.
                     </p>
                   </div>
                 </div>
@@ -109,24 +73,35 @@ const Dashboard = () => {
               <p className="title">Your Library</p>
             </div>
             {fetchingDecks ? (
-                <div className='col-md-12 text-center d-flex justify-content-center align-items-center' style={{height: '300px'}}>
-                    <PropagateLoader color="#221daf" />
-                </div>
+              <div
+                className="col-md-12 text-center d-flex justify-content-center align-items-center"
+                style={{ height: "300px" }}
+              >
+                <PropagateLoader color="#221daf" />
+              </div>
+            ) : decks.length === 0 ? (
+              <div className='row justify-content-center empty-pane'>
+                <div className='text-center'>
+                  <img className="img-fluid" src={EmptyImg} />
+                  <p>No Study Deck Created Yet</p>
+                  </div>
+              </div>
             ) : (
-              decks.map(({ id, title, description, visibility }, index) => {
+              decks.map(({ userId: id, title, description, visibility }, index) => {
                 return (
                   <div className="col-md-4">
                     <div className="flash-card__item">
                       <div className="d-flex justify-content-between align-items-center">
-                        <Link to={`/deck/${id}/${title}/practice`}>
+                        <Link to={`/deck/${id}/practice`}>
                           <h5>{title}</h5>
                         </Link>
-                        <div className='d-flex gap-2 visibility-status align-items-center'>
-                            {visibility === "public" ? (
+                        <div className="d-flex gap-2 visibility-status align-items-center">
+                          {visibility === "public" ? (
                             <i className="lni lni-world"></i>
-                            ) : visibility === "private" ? (
+                          ) : visibility === "private" ? (
                             <i className="lni lni-lock-alt"></i>
-                            ) : null} {visibility}
+                          ) : null}{" "}
+                          {visibility}
                         </div>
                       </div>
                       <p className="description">{description}</p>
@@ -134,30 +109,30 @@ const Dashboard = () => {
 
                       <div className="d-flex menu">
                         <div className="col">
-                            <Link to={`/deck/${id}/${title}/practice`}>
-                                <button className="btn text-left">
-                                    <i className="lni lni-book"></i> Practice
-                                </button>
-                            </Link>
+                          <Link to={`/deck/${id}/practice`}>
+                            <button className="btn text-left">
+                              <i className="lni lni-book"></i> Practice
+                            </button>
+                          </Link>
                         </div>
                         <div className="col d-flex justify-content-center">
-                            <Link to={`/deck/${id}/${title}/update`}>
-                                <button className="btn text-edit">
-                                    <i className="lni lni-pencil-alt"></i> Update
-                                </button>
-                            </Link>
+                          <Link to={`/deck/${id}/update`}>
+                            <button className="btn text-edit">
+                              <i className="lni lni-pencil-alt"></i> Update
+                            </button>
+                          </Link>
                         </div>
                         <div className="col d-flex justify-content-end">
-                            <Popconfirm
-                                title="Are you sure to delete this task?"
-                                onConfirm={() => handleDeleteDeck(id)}
-                                okText="Yes"
-                                cancelText="No"
-                            >
+                          <Popconfirm
+                            title="Are you sure to delete this task?"
+                            onConfirm={() => handleDeleteDeck(id)}
+                            okText="Yes"
+                            cancelText="No"
+                          >
                             <button className="btn text-danger">
-                                <i className="lni lni-trash-can"></i> Delete
+                              <i className="lni lni-trash-can"></i> Delete
                             </button>
-                            </Popconfirm>
+                          </Popconfirm>
                         </div>
                       </div>
                     </div>

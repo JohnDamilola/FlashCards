@@ -19,17 +19,19 @@ const Login = () => {
     setIsSubmitting(true);
 
     await http
-      .post("/auth/login", payload)
+      .post("/login", payload)
       .then((res) => {
+        const { user } = res.data || {}
+        window.localStorage.setItem('flashCardUser', JSON.stringify(user))
         Swal.fire({
           icon: 'success',
           title: 'Login Successful!',
           text: 'You have successfully logged in',
           confirmButtonColor: '#221daf',
         }).then(() => {
+          setIsSubmitting(false);
           window.location.replace("/dashboard");
         })
-        setIsSubmitting(false);
       })
       .catch((err) => {
         Swal.fire({

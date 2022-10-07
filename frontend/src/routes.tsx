@@ -25,12 +25,12 @@ const authRoutes = [
   }
 ]
 
-const FlashcardRoutes = [
-  {
-    path: '/deck/:id/:name',
-    element: <Flashcard />,
-  }
-]
+// const FlashcardRoutes = [
+//   {
+//     path: '/deck/:id/:name',
+//     element: <Flashcard />,
+//   }
+// ]
 
 const dashboardRoutes = [
   {
@@ -43,12 +43,12 @@ const dashboardRoutes = [
   },
   {
     exact: true,
-    path: '/deck/:id/:name/practice',
+    path: '/deck/:id/practice',
     element: <PracticeDeck />,
   },
   {
     exact: true,
-    path: '/deck/:id/:name/update',
+    path: '/deck/:id/update',
     element: <Flashcard />,
   },
   {
@@ -57,4 +57,4 @@ const dashboardRoutes = [
   }
 ]
 
-export { authRoutes, publicRoutes, dashboardRoutes, FlashcardRoutes }
+export { authRoutes, publicRoutes, dashboardRoutes }

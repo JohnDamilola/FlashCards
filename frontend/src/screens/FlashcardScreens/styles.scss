@@ -1,97 +1,97 @@
-#app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
+// #app { height: 100% }
+// html,
+// body {
+//   position: relative;
+//   height: 100%;
+// }
 
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
+// body {
+//   background: #eee;
+//   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+//   font-size: 14px;
+//   color: #000;
+//   margin: 0;
+//   padding: 0;
+// }
 
-.swiper {
-  width: 1000px;
-  height: 500px;
-}
+// .swiper {
+//   width: 1000px;
+//   height: 500px;
+// }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+// .swiper-slide {
+//   text-align: center;
+//   font-size: 18px;
+//   background: #fff;
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
+//   /* Center slide text vertically */
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: -webkit-flex;
+//   display: flex;
+//   -webkit-box-pack: center;
+//   -ms-flex-pack: center;
+//   -webkit-justify-content: center;
+//   justify-content: center;
+//   -webkit-box-align: center;
+//   -ms-flex-align: center;
+//   -webkit-align-items: center;
+//   align-items: center;
+// }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
+// .swiper-slide img {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+// /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+// .flip-card {
+//   width: 300px;
+//   height: 200px;
+//   border: 1px solid #f1f1f1;
+//   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+// }
 
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
+// /* This container is needed to position the front and back side */
+// .flip-card-inner {
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+//   text-align: center;
+//   transition: transform 0.8s;
+//   transform-style: preserve-3d;
+// }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+// /* Do an horizontal flip when you move the mouse over the flip box container */
+// .flip-card:hover .flip-card-inner {
+//   transform: rotateY(180deg);
+// }
 
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
+// /* Position the front and back side */
+// .flip-card-front, .flip-card-back {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   -webkit-backface-visibility: hidden; /* Safari */
+//   backface-visibility: hidden;
+// }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color:white;
-  color: black;
-}
+// /* Style the front side (fallback if image is missing) */
+// .flip-card-front {
+//   background-color:white;
+//   color: black;
+// }
 
-/* Style the back side */
-.flip-card-back {
-  background-color: white;
-  color: black;
-  transform: rotateY(180deg);
-}
+// /* Style the back side */
+// .flip-card-back {
+//   background-color: white;
+//   color: black;
+//   transform: rotateY(180deg);
+// }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }

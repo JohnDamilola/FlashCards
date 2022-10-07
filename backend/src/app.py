@@ -14,15 +14,15 @@ config = {
     "measurementId": "G-EJSL73GBEX"
 }
 
-firebase = pyrebase.initialize_app(config)
+# firebase = pyrebase.initialize_app(config)
 
 auth = firebase.auth()
 
 db = firebase.database()
 
-from flask import *
+# from flask import *
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 class U():
     user = None
@@ -85,5 +85,5 @@ def create():
 
 
 if __name__ == '__main__':
-	app.run(debug=True)
-
+	# app.run(debug=True)
+    print("Hello")

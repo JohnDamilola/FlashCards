@@ -20,7 +20,7 @@ const Register = () => {
     setIsSubmitting(true);
 
     await http
-      .post("/auth/register", payload)
+      .post("/signup", payload)
       .then((res) => {
         Swal.fire({
           icon: 'success',
@@ -33,6 +33,7 @@ const Register = () => {
         setIsSubmitting(false);
       })
       .catch((err) => {
+        console.log(err)
         Swal.fire({
           icon: 'error',
           title: 'Registration Failed!',
@@ -52,7 +53,7 @@ const Register = () => {
               <div className="login-card">
                 <h3>Create an account</h3>
                 <form onSubmit={handleRegister}>
-                  <div className="form-group">
+                  {/* <div className="form-group">
                     <label>Full name</label>
                     <input
                       type="text"
@@ -61,7 +62,7 @@ const Register = () => {
                       onChange={(e) => setName(e.target.value)}
                       required
                     />
-                  </div>
+                  </div> */}
                   <div className="form-group">
                     <label>Email address</label>
                     <input
