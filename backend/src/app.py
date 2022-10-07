@@ -66,13 +66,14 @@ def create():
         if request.method=='POST':
             if request.form['submit'] == 'add':
                 try:
+                    deckid=request.form['deckid']
                     title =request.form['title']
                     description =request.form['description']
                     vissibility =request.form['vissibility']
-                    data={"userid":f"{u.user['localId']}","title":title,"description":description,"vissibility":vissibility}
+                    data={"deckid":f"{u.user['localId']}_{deckid}","title":title,"description":description,"vissibility":vissibility}
                     db.child("deck").push(data)
-                    str=u.user['localId']
-                    snapshot = db.child("deck").order_by_child("userid").equal_to(str).get()
+                    str=f"{u.user['localId']}_{deckid}"
+                    snapshot = db.child("deck").order_by_child("deckid").equal_to(str).get()
                     t = snapshot.val()
                     return render_template('index.html',tt=t.values())
                 except Exception as e:
