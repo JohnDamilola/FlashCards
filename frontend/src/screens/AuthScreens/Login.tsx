@@ -29,9 +29,9 @@ const Login = () => {
           text: 'You have successfully logged in',
           confirmButtonColor: '#221daf',
         }).then(() => {
+          setIsSubmitting(false);
           window.location.replace("/dashboard");
         })
-        setIsSubmitting(false);
       })
       .catch((err) => {
         Swal.fire({

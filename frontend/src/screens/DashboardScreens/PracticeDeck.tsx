@@ -1,8 +1,7 @@
-import { Card, Popconfirm } from "antd";
+import { Card } from "antd";
 import Flashcard from "components/PracticeDeck";
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { PropagateLoader } from "react-spinners";
+import { useNavigate, useParams } from "react-router-dom";
 import http from "utils/api";
 import "./styles.scss";
 
@@ -15,14 +14,36 @@ interface Deck {
 
 const PracticeDeck = () => {
   const navigate = useNavigate();
+  const [deck, setDeck] = useState<Deck | null>(null);
   const [decks, setDecks] = useState<Deck[]>([]);
   const [fetchingDecks, setFetchingDecks] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { id, name } = useParams();
+  const { id } = useParams();
+
+  useEffect(() => {
+    fetchDeck()
+  }, [])
+
+  const fetchDeck = async () => {
+    setIsSubmitting(true);
+    await http
+      .get(`/deck/${id}`)
+      .then((res) => {
+        const { deck: _deck } = res.data || {};
+        setDeck(_deck);
+        setIsSubmitting(false);
+      })
+      .catch((err) => {
+        setIsSubmitting(false);
+      });
+  };
 
   const handleDeleteDeck = (id: any) => {
     // todo
   };
+
+  const { title, description } = deck || {}
 
   return (
     <div className="dashboard-page dashboard-commons">
@@ -42,10 +63,10 @@ const PracticeDeck = () => {
                   </div>
                   <div>
                     <h3>
-                      <b>{name}</b>
+                      <b>{title}</b>
                     </h3>
                     <p className="">
-                      The science of life and living organisms.
+                      {description}
                     </p>
                   </div>
                 </div>
@@ -54,7 +75,7 @@ const PracticeDeck = () => {
           </div>
 
           <div className="flash-card__list row justify-content-center mt-4">
-            <div className='col-md-8'>
+            <div className="col-md-8">
               <Flashcard />
             </div>
           </div>

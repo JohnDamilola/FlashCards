@@ -1,22 +1,29 @@
-import { Card, Radio, Switch } from "antd";
-import axios from "axios";
+import { Radio } from "antd";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import http from "utils/api";
 import "./styles.scss";
 
 const CreateDeck = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [visibility, setVisibility] = useState('public');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleCreateDeck = () => {
+  const flashCardUser = window.localStorage.getItem('flashCardUser');
+  const { localId } = flashCardUser && JSON.parse(flashCardUser) || {};
+
+  const handleCreateDeck = async(e: any) => {
+    e.preventDefault();
     const payload = {
       title,
       description,
-      visibility
+      visibility,
+      localId
     };
+    setIsSubmitting(true);
 
-    axios
+    await http
       .post("/deck/create", payload)
       .then((res) => {
         const { id } = res.data;
@@ -26,7 +33,8 @@ const CreateDeck = () => {
           text: 'You have successfully created a deck',
           confirmButtonColor: '#221daf',
         }).then(() => {
-          window.location.replace(`/deck/${id}`);
+          setIsSubmitting(false);
+          window.location.replace(`/deck/${id}/practice`);
         })
       })
       .catch((err) => {
@@ -36,6 +44,7 @@ const CreateDeck = () => {
           text: 'An error occurred, please try again',
           confirmButtonColor: '#221daf',
         })
+        setIsSubmitting(false);
       });
   };
 
@@ -57,7 +66,7 @@ const CreateDeck = () => {
                 </div>
 
                 <div className="flash-card__list row justify-content-center mt-2">
-                  <form className="col-md-12">
+                  <form className="col-md-12" onSubmit={handleCreateDeck}>
                     <div className="form-group">
                       <label>Title</label>
                       <input
@@ -88,9 +97,9 @@ const CreateDeck = () => {
                       </Radio.Group>
                     </div>
                     <div className="form-group mt-4 text-right mb-0">
-                      <button className="btn" onClick={handleCreateDeck}>
+                      <button className="btn" type='submit'>
                         <i className="lni lni-circle-plus mr-2"></i>
-                        <span className="">Create Card</span>
+                        <span className="">{isSubmitting ? 'Creating Card...' : 'Create Card'}</span>
                       </button>
                     </div>
                   </form>
