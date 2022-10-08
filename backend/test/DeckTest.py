@@ -9,7 +9,7 @@ class TestApp(unittest.TestCase):
 
     def test_deck_all_route(self):
         '''Test the deck/all route of our app'''
-        response=self.app.get('/deck/all')
+        response=self.app.get('/deck/all',query_string=dict(localId='Test'))
         print("deck/all/get",response.status_code)
         assert response.status_code==200
         assert response.data.decode('utf-8')=='Testing, Flask!'
