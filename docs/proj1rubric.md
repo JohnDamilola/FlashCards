@@ -3,11 +3,11 @@
 |-----|---------|------|
 |Video1||| 
 |Video2||| 
-|Workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)|||
-|Number of commits|||
-|Number of commits: by different people|||
-|Issues reports: there are **many**|||
-|Issues are being closed|||
+|Workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)|3|https://github.com/JohnDamilola/FlashCards/graphs/contributors|
+|Number of commits|3|https://github.com/JohnDamilola/FlashCards/graphs/commit-activity|
+|Number of commits: by different people|3|https://github.com/JohnDamilola/FlashCards/graphs/contributors|
+|Issues reports: there are **many**|3|https://github.com/JohnDamilola/FlashCards/issues|
+|Issues are being closed|3|https://github.com/JohnDamilola/FlashCards/issues|
 |DOI badge: exists|||
 |Docs: doco generated, format not ugly |||
 |Docs: what: point descriptions of each class/function (in isolation) || |
@@ -30,4 +30,4 @@
 |Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)||There is a requirement file. |
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|||
 |Evidence that the members of the team are working across multiple places in the code base|||
-|Short release cycles ||The team commits very frequently. |
+|Short release cycles |3|The team commits very frequently. https://github.com/JohnDamilola/FlashCards/graphs/commit-activity|
