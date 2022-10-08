@@ -27,3 +27,4 @@ python-editor==1.0.3
 six==1.10.0
 pyrebase
 urllib3
+flask_cors
