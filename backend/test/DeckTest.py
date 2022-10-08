@@ -10,20 +10,17 @@ class TestApp(unittest.TestCase):
     def test_deck_all_route(self):
         '''Test the deck/all route of our app'''
         response=self.app.get('/deck/all',query_string=dict(localId='Test'))
-        print("deck/all/get",response.status_code)
         assert response.status_code==200
     
 
     def test_deck_all_route_post(self):
         '''Test that the post request to the '/deck/all' route is not allowed'''
         response=self.app.post('/deck/all')
-        print("deck/all/post",response.status_code)
         assert response.status_code==405
 
     def test_create_deck_route(self):
         '''Test the create deck route of our app'''
         response=self.app.post('/deck/create')
-        print("deck/create/post",response.status_code)
         assert response.status_code==200
 
 if __name__=="__main__":
