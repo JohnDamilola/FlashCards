@@ -16,8 +16,8 @@
 |Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|||
 |Use of version control tools|||
 |Use of style checkers || |
-|Use of code formatters. ||No indication that code formatter is used|
-|Use of syntax checkers. ||No indication that syntax checker is used|
+|Use of code formatters. |||
+|Use of syntax checkers. |||
 |Use of code coverage |||
 |Other automated analysis tools||github action |
 |Test cases exist|||
