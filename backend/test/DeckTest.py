@@ -8,23 +8,23 @@ class TestApp(unittest.TestCase):
         self.app=create_app().test_client()
 
     def test_deck_all_route(self):
-        '''Test the index route of our app'''
+        '''Test the deck/all route of our app'''
         response=self.app.get('/deck/all')
-        print(response.status_code)
+        print("deck/all/get",response.status_code)
         assert response.status_code==200
         assert response.data.decode('utf-8')=='Testing, Flask!'
     
 
     def test_deck_all_route_post(self):
-        '''Test that the post request to the '/' route is not allowed'''
+        '''Test that the post request to the '/deck/all' route is not allowed'''
         response=self.app.post('/deck/all')
-        print(response.status_code)
+        print("deck/all/post",response.status_code)
         assert response.status_code==405
 
     def test_create_deck_route(self):
         '''Test the create deck route of our app'''
         response=self.app.post('/deck/create')
-        print(response.status_code)
+        print("deck/create/post",response.status_code)
         assert response.status_code==200
 
 if __name__=="__main__":
