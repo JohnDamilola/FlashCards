@@ -12,7 +12,6 @@ class TestApp(unittest.TestCase):
         response=self.app.get('/deck/all',query_string=dict(localId='Test'))
         print("deck/all/get",response.status_code)
         assert response.status_code==200
-        assert response.data.decode('utf-8')=='Testing, Flask!'
     
 
     def test_deck_all_route_post(self):
