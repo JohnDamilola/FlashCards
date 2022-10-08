@@ -5,7 +5,7 @@ from api import create_app
 
 class TestApp(unittest.TestCase):
     def setUp(self):
-        self.app=create_app().app.test_client()
+        self.app=create_app().test_client()
 
     def test_index_route(self):
         '''Test the index route of our app'''
