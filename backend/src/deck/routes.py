@@ -1,3 +1,5 @@
+# backend/src/deck/routes.py
+
 from flask import Blueprint, jsonify, request
 from flask_cors import cross_origin
 from .. import firebase
@@ -7,23 +9,23 @@ deck_bp = Blueprint(
 )
 
 db = firebase.database()
-
-@deck_bp.route('/deck/<id>', methods = ['GET'])
-@cross_origin(supports_credentials=True)
-def getdeck(id):
-    try:
-        deck = db.child("deck").child(id).get()
-        return jsonify(
-            deck = deck.val(),
-            message = 'Fetched deck successfully',
-            status = 201
-        )
-    except:
-        return jsonify(
-            decks = [],
-            message = "An error occurred:",
-            status = 201
-        )
+#imho dont need this method, get all decks is already handling this condition
+# @deck_bp.route('/deck/<id>', methods = ['GET'])
+# @cross_origin(supports_credentials=True)
+# def getdeck(id):
+#     try:
+#         deck = db.child("deck").child(id).get()
+#         return jsonify(
+#             deck = deck.val(),
+#             message = 'Fetched deck successfully',
+#             status = 201
+#         )
+#     except:
+#         return jsonify(
+#             decks = [],
+#             message = "An error occurred:",
+#             status = 201
+#         )
 
 @deck_bp.route('/deck/all', methods = ['GET'])
 @cross_origin(supports_credentials=True)
@@ -32,8 +34,7 @@ def getdecks():
     localId = args['localId']
     try:
         if localId:
-            # user_decks = db.child("deck").order_by_child("userId").equal_to({localId}).limit_to_first(10).get()
-            user_decks = db.child("deck").get()
+            user_decks = db.child("deck").order_by_child("userId").equal_to(f"{localId}").limit_to_first(10).get()
             decks = [deck.val() for deck in user_decks.each()]
             return jsonify(
                 decks = decks,
@@ -41,7 +42,7 @@ def getdecks():
                 status = 201
             )
         else:
-            alldecks = db.child("deck").order_by_child("visibility").equal_to(1).get()
+            alldecks = db.child("deck").order_by_child("visibility").equal_to("1").get()
             d = alldecks.val()
             return jsonify(
                 decks = d,
@@ -61,12 +62,13 @@ def create():
     try:
         data = request.get_json()
         localId = data['localId']
+        deckid=data["deckid"]
         title = data['title']
         description = data['description']
         visibility = data['visibility']
         
         db.child("deck").push({
-            "userId": localId, "title": title, "description": description, "visibility" : visibility
+            "deckid":f"{localId}_{deckid}","userId": localId, "title": title, "description": description, "visibility" : visibility
         })
         
         return jsonify(
@@ -84,14 +86,14 @@ def create():
 def update(id):
     try:
         data = request.get_json()
-        key = id
+        deckid = id
         localId = data['localId']
         title = data['title']
         description = data['description']
         visibility = data['visibility']
         
-        db.child("deck").child(key).update({
-            "userId": localId, "title": title, "description": description, "visibility" : visibility
+        db.child("deck").order_by_child("deckid").equal_to(f"{localId}_{deckid}").update({
+            "deckid":f"{localId}_{deckid}","userId": localId, "title": title, "description": description, "visibility" : visibility
         })
         
         return jsonify(
@@ -104,14 +106,14 @@ def update(id):
             status = 400
         )
         
-@deck_bp.route('/deck/delete', methods = ['DELETE'])
+@deck_bp.route('/deck/delete/<id>', methods = ['DELETE'])
 @cross_origin(supports_credentials=True)
-def delete():
+def delete(id):
     try:
         data = request.get_json()
-        key = data['key']
+        deckid = id
         
-        db.child("deck").child(key).remove()
+        db.child("deck").order_by_child("deckid").equal_to(f"{deckid}").remove()
         
         return jsonify(
             message = 'Delete Deck Successful',
@@ -122,4 +124,3 @@ def delete():
             message = 'Delete Deck Failed',
             status = 400
         )
-
