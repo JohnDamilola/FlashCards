@@ -10,6 +10,11 @@ auth_bp = Blueprint(
 
 auth = firebase.auth()
 
+@auth_bp.route('/', methods=['GET'])
+@cross_origin(supports_credentials=True)
+def index():
+    return "Hello"
+
 @auth_bp.route('/signup', methods=['POST'])
 @cross_origin(supports_credentials=True)
 def signup():

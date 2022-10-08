@@ -1,4 +1,4 @@
-# from backend.src import create_app
+from distutils.debug import DEBUG
 from flask import Flask
 from flask_cors import CORS
 
@@ -8,9 +8,11 @@ def create_app():
 
     with app.app_context():
         from .auth.routes import auth_bp
+        from .deck.routes import deck_bp
 
         # Register Blueprints
         app.register_blueprint(auth_bp)
+        app.register_blueprint(deck_bp)
 
     return app
     
@@ -22,4 +24,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 app.debug = True
 
 if __name__ == '__main__':
+    app.config.from_mapping({
+        "DEBUG": True
+    })
     app.run(port=8000, debug=True)
