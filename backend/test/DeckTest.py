@@ -7,17 +7,17 @@ class TestApp(unittest.TestCase):
     def setUp(self):
         self.app=create_app().test_client()
 
-    def test_index_route(self):
+    def test_deck_all_route(self):
         '''Test the index route of our app'''
-        response=self.app.get('/')
+        response=self.app.get('/deck/all')
         print(response.status_code)
         assert response.status_code==200
         assert response.data.decode('utf-8')=='Testing, Flask!'
     
 
-    def test_index_route_post(self):
+    def test_deck_all_route_post(self):
         '''Test that the post request to the '/' route is not allowed'''
-        response=self.app.post('/')
+        response=self.app.post('/deck/all')
         print(response.status_code)
         assert response.status_code==405
 
