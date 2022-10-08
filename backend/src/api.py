@@ -8,7 +8,7 @@ def create_app():
 
     with app.app_context():
         from auth.routes import auth_bp
-        from .deck.routes import deck_bp
+        from deck.routes import deck_bp
 
         # Register Blueprints
         app.register_blueprint(auth_bp)
