@@ -1,12 +1,13 @@
 import { Card, Popconfirm } from "antd";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import EmptyImg from 'assets/images/empty.svg'
+import EmptyImg from "assets/images/empty.svg";
 import { PropagateLoader } from "react-spinners";
 import http from "utils/api";
 import "./styles.scss";
 
 interface Deck {
+  id: string;
   userId: string;
   title: string;
   description: string;
@@ -80,65 +81,67 @@ const Dashboard = () => {
                 <PropagateLoader color="#221daf" />
               </div>
             ) : decks.length === 0 ? (
-              <div className='row justify-content-center empty-pane'>
-                <div className='text-center'>
+              <div className="row justify-content-center empty-pane">
+                <div className="text-center">
                   <img className="img-fluid" src={EmptyImg} />
                   <p>No Study Deck Created Yet</p>
-                  </div>
+                </div>
               </div>
             ) : (
-              decks.map(({ userId: id, title, description, visibility }, index) => {
-                return (
-                  <div className="col-md-4">
-                    <div className="flash-card__item">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <Link to={`/deck/${id}/practice`}>
-                          <h5>{title}</h5>
-                        </Link>
-                        <div className="d-flex gap-2 visibility-status align-items-center">
-                          {visibility === "public" ? (
-                            <i className="lni lni-world"></i>
-                          ) : visibility === "private" ? (
-                            <i className="lni lni-lock-alt"></i>
-                          ) : null}{" "}
-                          {visibility}
-                        </div>
-                      </div>
-                      <p className="description">{description}</p>
-                      <p className="items-count">4 items</p>
-
-                      <div className="d-flex menu">
-                        <div className="col">
+              decks.map(
+                ({ id, title, description, visibility }, index) => {
+                  return (
+                    <div className="col-md-4">
+                      <div className="flash-card__item">
+                        <div className="d-flex justify-content-between align-items-center">
                           <Link to={`/deck/${id}/practice`}>
-                            <button className="btn text-left">
-                              <i className="lni lni-book"></i> Practice
-                            </button>
+                            <h5>{title}</h5>
                           </Link>
+                          <div className="d-flex gap-2 visibility-status align-items-center">
+                            {visibility === "public" ? (
+                              <i className="lni lni-world"></i>
+                            ) : visibility === "private" ? (
+                              <i className="lni lni-lock-alt"></i>
+                            ) : null}{" "}
+                            {visibility}
+                          </div>
                         </div>
-                        <div className="col d-flex justify-content-center">
-                          <Link to={`/deck/${id}/update`}>
-                            <button className="btn text-edit">
-                              <i className="lni lni-pencil-alt"></i> Update
-                            </button>
-                          </Link>
-                        </div>
-                        <div className="col d-flex justify-content-end">
-                          <Popconfirm
-                            title="Are you sure to delete this task?"
-                            onConfirm={() => handleDeleteDeck(id)}
-                            okText="Yes"
-                            cancelText="No"
-                          >
-                            <button className="btn text-danger">
-                              <i className="lni lni-trash-can"></i> Delete
-                            </button>
-                          </Popconfirm>
+                        <p className="description">{description}</p>
+                        <p className="items-count">4 items</p>
+
+                        <div className="d-flex menu">
+                          <div className="col">
+                            <Link to={`/deck/${id}/practice`}>
+                              <button className="btn text-left">
+                                <i className="lni lni-book"></i> Practice
+                              </button>
+                            </Link>
+                          </div>
+                          <div className="col d-flex justify-content-center">
+                            <Link to={`/deck/${id}/update`}>
+                              <button className="btn text-edit">
+                                <i className="lni lni-pencil-alt"></i> Update
+                              </button>
+                            </Link>
+                          </div>
+                          <div className="col d-flex justify-content-end">
+                            <Popconfirm
+                              title="Are you sure to delete this task?"
+                              onConfirm={() => handleDeleteDeck(id)}
+                              okText="Yes"
+                              cancelText="No"
+                            >
+                              <button className="btn text-danger">
+                                <i className="lni lni-trash-can"></i> Delete
+                              </button>
+                            </Popconfirm>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })
+                  );
+                }
+              )
             )}
           </div>
         </div>
