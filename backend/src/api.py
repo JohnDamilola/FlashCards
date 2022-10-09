@@ -1,4 +1,3 @@
-from distutils.debug import DEBUG
 from flask import Flask
 from flask_cors import CORS
 
@@ -27,4 +26,5 @@ if __name__ == '__main__':
     app.config.from_mapping({
         "DEBUG": True
     })
+    
     app.run(port=8000, debug=True)

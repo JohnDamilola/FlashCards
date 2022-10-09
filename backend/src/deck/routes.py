@@ -1,5 +1,3 @@
-# backend/src/deck/routes.py
-
 from flask import Blueprint, jsonify, request
 from flask_cors import cross_origin
 import sys
@@ -12,23 +10,23 @@ deck_bp = Blueprint(
 )
 
 db = firebase.database()
-#imho dont need this method, get all decks is already handling this condition
-# @deck_bp.route('/deck/<id>', methods = ['GET'])
-# @cross_origin(supports_credentials=True)
-# def getdeck(id):
-#     try:
-#         deck = db.child("deck").child(id).get()
-#         return jsonify(
-#             deck = deck.val(),
-#             message = 'Fetched deck successfully',
-#             status = 201
-#         )
-#     except:
-#         return jsonify(
-#             decks = [],
-#             message = "An error occurred:",
-#             status = 201
-#         )
+
+@deck_bp.route('/deck/<id>', methods = ['GET'])
+@cross_origin(supports_credentials=True)
+def getdeck(id):
+    try:
+        deck = db.child("deck").child(id).get()
+        return jsonify(
+            deck = deck.val(),
+            message = 'Fetched deck successfully',
+            status = 201
+        )
+    except:
+        return jsonify(
+            decks = [],
+            message = "An error occurred:",
+            status = 201
+        )
 
 @deck_bp.route('/deck/all', methods = ['GET'])
 @cross_origin(supports_credentials=True)
@@ -39,6 +37,12 @@ def getdecks():
         if localId:
             user_decks = db.child("deck").order_by_child("userId").equal_to(f"{localId}").limit_to_first(10).get()
             decks = [deck.val() for deck in user_decks.each()]
+            decks = []
+            for deck in user_decks.each():
+                obj = deck.val()
+                obj['id'] = deck.key()
+                decks.append(obj)
+                
             return jsonify(
                 decks = decks,
                 message = 'Fetching decks successfully',
