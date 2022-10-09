@@ -26,7 +26,7 @@ class TestApp(unittest.TestCase):
         print("sigunp",response.status_code)
         assert response.status_code==200
         
-   def test_login_route(self):
+    def test_login_route(self):
         '''Test the login route of our app'''
         response=self.app.post('/login')
         print("login",response.status_code)
