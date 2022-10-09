@@ -1,0 +1,4 @@
+pytest==7.1.2
+firebase-admin
+pyrebase4
+flask
