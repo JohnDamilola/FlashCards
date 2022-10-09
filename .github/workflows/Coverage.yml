@@ -1,0 +1,38 @@
+name: Code Coverage
+
+on:
+    push:
+        branches: ["main"]
+
+permissions:
+    contents: read
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Set up Python 3.9
+              uses: actions/setup-python@v3
+              with:
+                  python-version: "3.9"
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install coverage
+                  pip install pytest
+                  if [ -f backend/requirements/requirements.txt ]; then pip install -r backend/requirements/requirements.txt; fi
+            - name: Add folders to Python Path
+              run: |
+                  echo "PYTHONPATH=tests:code:data" >> $GITHUB_ENV
+            - name: Generate Coverage
+              run: |
+                  export CI=GITHUB_ACTIONS
+                  coverage run -m backend.test.AuthTest
+                  coverage xml
+            - name: Upload to CodeCov
+              run: |
+                  curl -Os https://uploader.codecov.io/latest/linux/codecov
+                  chmod +x codecov
+                  ./codecov
