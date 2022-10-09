@@ -21,6 +21,7 @@ class TestApp(unittest.TestCase):
     def test_create_deck_route(self):
         '''Test the create deck route of our app'''
         response=self.app.post('/deck/create')
+        print(response.status_code)
         assert response.status_code==200
 
 if __name__=="__main__":
