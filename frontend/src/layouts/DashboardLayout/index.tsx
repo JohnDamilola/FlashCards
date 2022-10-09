@@ -4,7 +4,6 @@ import './styles.scss'
 
 const DashboardLayout = () => {
   const flashCardUser = window.localStorage.getItem('flashCardUser');
-  console.log(flashCardUser)
   const isAuth = flashCardUser && JSON.parse(flashCardUser) ? true : false;
 
   if (!isAuth) {
