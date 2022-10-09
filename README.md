@@ -55,6 +55,7 @@ A spaced repetition learning platform to <b>create</b>, <b>memorize</b> and <b>s
 - [x] Setup backend and frontend deployment
 
 ### Phase 2:
+- [ ] Delete User Account
 - [ ] Track practice/study progress
 - [ ] Tag/Categorize Cards in a deck
 - [ ] Daily learning streaks stats
