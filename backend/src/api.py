@@ -1,16 +1,16 @@
 from flask import Flask
 from flask_cors import CORS
 import sys
-sys.path.append(".")
+sys.path.append("..")
 
 def create_app():
     """Create Flask application."""
     app = Flask(__name__, instance_relative_config=False)
 
     with app.app_context():
-        from .auth.routes import auth_bp
-        from .deck.routes import deck_bp
-        from .cards.routes import card_bp
+        from src.auth.routes import auth_bp
+        from src.deck.routes import deck_bp
+        from src.cards.routes import card_bp
 
         # Register Blueprints
         app.register_blueprint(auth_bp)
