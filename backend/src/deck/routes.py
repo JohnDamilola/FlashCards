@@ -130,7 +130,7 @@ def update(id):
             status = 400
         ), 400
  
-##This method is called when the user requests to delete the deck. Only the deckid is required to delete the deck.
+#This method is called when the user requests to delete the deck. Only the deckid is required to delete the deck.
 @deck_bp.route('/deck/delete/<id>', methods = ['DELETE'])
 @cross_origin(supports_credentials=True)
 def delete(id):
