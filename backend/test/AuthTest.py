@@ -26,7 +26,7 @@ class TestApp(unittest.TestCase):
         
     def test_login_route_registered_user(self):
         '''Test the login route of our app with an already registered user'''
-        response=self.app.post('/login',data=dict(email='aaronadb@gmail.com',password='flashcards123'))
+        response=self.app.post('/login',data=dict(email='aaronadb@gmail.com',password='flashcards123'),follow_redirects=True)
         print('login',response.status_code)
         assert response.status_code==200
         
