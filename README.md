@@ -2,7 +2,7 @@
   <img
     width="400"
     src="https://flashcards-519da.web.app/static/media/logo.6d3f27e3fc0c4a7bc3b3.png"
-    alt="Starship – Cross-shell prompt"
+    alt="FlashCards
   />
 </p>
 <p align="center">
@@ -41,6 +41,18 @@ A spaced repetition learning platform to <b>create</b>, <b>memorize</b> and <b>s
 ## Getting started & Installation:
 - Backend [See README.md](https://github.com/JohnDamilola/FlashCards/blob/main/backend/Readme.md)
 - Frontend [See README.md](https://github.com/JohnDamilola/FlashCards/blob/main/frontend/README.md)
+
+<img
+    width="100%"
+    src="./frontend/src/assets/images/1.png"
+    alt="Demo Screens 1"
+  />
+
+  <img
+    width="100%"
+    src="./frontend/src/assets/images/2.png"
+    alt="Demo Screens 2"
+  />
 
 ## Future Roadmap
 ### Phase 1:
