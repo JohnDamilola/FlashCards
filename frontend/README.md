@@ -4,7 +4,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ##Setup Frontend Server
 
-Run the following command. <br/> `npm start` is the command to run frontend server.
+Run the following command to start the frontend server.
 ```
 cd [location of the git repository]/frontend
 npm install
