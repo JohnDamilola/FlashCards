@@ -1,6 +1,6 @@
 # [Repository](https://github.com/JohnDamilola/FlashCards)
-|Notes|Score = |Evidence|
-|-----|---------|------|
+|Notes          |             Score =           |Evidence|
+|---------------|-------------------------------|------|
 |Video1||| 
 |Video2||| 
 |Workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)|3|https://github.com/JohnDamilola/FlashCards/graphs/contributors|
