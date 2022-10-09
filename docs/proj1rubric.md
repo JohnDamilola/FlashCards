@@ -101,10 +101,6 @@
 |Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?|||
 |Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?|||
 |Do you make timely announcements of the deprecation of components, APIs, etc.?|||
-||||
-||||
-||||
-||||
 
 
 
