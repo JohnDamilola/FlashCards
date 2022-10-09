@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/github/license/JohnDamilola/FlashCards?style=plastic" /></a>
 <a href="https://github.com/JohnDamilola/FlashCards/graphs/contributors" alt="Contributors">
 <img src="https://img.shields.io/github/contributors/JohnDamilola/FlashCards?style=plastic"/> </a>
-[![Python application](https://github.com/JohnDamilola/FlashCards/actions/workflows/python-app.yml/badge.svg?style=plastic?branch=main)](https://github.com/JohnDamilola/FlashCards/actions/workflows/python-app.yml)
+[![Python application](https://github.com/JohnDamilola/FlashCards/actions/workflows/Application.yml/badge.svg?style=plastic?branch=main)](https://github.com/JohnDamilola/FlashCards/actions/workflows/Application.yml)
 ![Code Coverage](https://github.com/JohnDamilola/FlashCards/actions/workflows/Coverage.yml/badge.svg)
 ![Codecov](https://codecov.io/github/JohnDamilola/FlashCards/branch/main/graph/badge.svg)
 [![DOI](https://zenodo.org/badge/539553646.svg)](https://zenodo.org/badge/latestdoi/539553646)
