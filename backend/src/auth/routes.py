@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify               #import dependancies
 from flask import current_app as app
 from flask_cors import cross_origin
 from flask import request
@@ -20,7 +20,7 @@ def index():
 
 @auth_bp.route('/signup', methods=['POST'])
 @cross_origin(supports_credentials=True)
-def signup():
+def signup():                                       #this method is used to create new users and register them in firebase
     try:
         data = request.get_json()
         email = data['email']
@@ -28,33 +28,33 @@ def signup():
     
         user = auth.create_user_with_email_and_password(email, password)
         return jsonify(
-            user = user,
-            message = 'Registered Successfully',
+            user = user,                            
+            message = 'Registered Successfully',    #if the registration process is successful, this message is displayed
             status = 201
         ), 201
     except:
         return jsonify(
-            message = 'Registration Failed',
+            message = 'Registration Failed',        #if the registration process is not successful, this message is displayed
             status = 400
         ), 400
 
 @auth_bp.route('/login', methods=['POST'])
 @cross_origin(supports_credentials=True)
-def login():
+def login():                                        #this method is used by registered users to sign in to their account
     try:
         data = request.get_json()
         email = data['email']
-        password = data['password']
+        password = data['password']                   
         
         user = auth.sign_in_with_email_and_password(email, password)
         return jsonify(
             user = user,
-            message = 'Login Successful',
+            message = 'Login Successful',           #if login is successful, this message is displayed
             status = 200
         ), 200
     except:
         return jsonify(
-            message = 'Login Failed',
+            message = 'Login Failed',               #if login is not successful, this message is displayed
             status = 400
         ), 400
 
