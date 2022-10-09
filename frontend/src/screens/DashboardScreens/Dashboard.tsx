@@ -12,6 +12,7 @@ interface Deck {
   title: string;
   description: string;
   visibility: string;
+  cards_count: number;
 }
 
 const Dashboard = () => {
@@ -57,7 +58,7 @@ const Dashboard = () => {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3>
-                      <b>Welcome Back,</b> John 👋
+                      <b>Hey, Welcome Back!</b> 👋
                     </h3>
                     <p className="">
                       Let's start creating, memorizing and sharing your
@@ -89,7 +90,7 @@ const Dashboard = () => {
               </div>
             ) : (
               decks.map(
-                ({ id, title, description, visibility }, index) => {
+                ({ id, title, description, visibility, cards_count }, index) => {
                   return (
                     <div className="col-md-4">
                       <div className="flash-card__item">
@@ -107,7 +108,7 @@ const Dashboard = () => {
                           </div>
                         </div>
                         <p className="description">{description}</p>
-                        <p className="items-count">4 items</p>
+                        <p className="items-count">{cards_count} item(s)</p>
 
                         <div className="d-flex menu">
                           <div className="col">

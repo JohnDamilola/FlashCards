@@ -1,10 +1,10 @@
 import Login from 'screens/AuthScreens/Login'
 import Register from 'screens/AuthScreens/Register'
+import CreateCards from 'screens/DashboardScreens/CreateCards'
 import CreateDeck from 'screens/DashboardScreens/CreateDeck'
 import Dashboard from 'screens/DashboardScreens/Dashboard'
 import Explore from 'screens/DashboardScreens/Explore'
 import PracticeDeck from 'screens/DashboardScreens/PracticeDeck'
-import Flashcard from 'screens/FlashcardScreens/Flashcard'
 import Home from 'screens/Home'
 
 const publicRoutes = [
@@ -25,13 +25,6 @@ const authRoutes = [
   }
 ]
 
-// const FlashcardRoutes = [
-//   {
-//     path: '/deck/:id/:name',
-//     element: <Flashcard />,
-//   }
-// ]
-
 const dashboardRoutes = [
   {
     path: '/dashboard',
@@ -49,7 +42,11 @@ const dashboardRoutes = [
   {
     exact: true,
     path: '/deck/:id/update',
-    element: <Flashcard />,
+    element: <CreateCards />,
+  },
+  {
+    path: '/cards-create/:deckId',
+    element: <CreateCards />,
   },
   {
     path: '/explore',

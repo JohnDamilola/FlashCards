@@ -10,7 +10,7 @@ import { Pagination, Navigation } from "swiper";
 import ReactCardFlip from "react-card-flip";
 import { useState } from "react";
 
-export default function Flashcard() {
+export default function Flashcard({cards}: any) {
   return (
     <>
       <Swiper
@@ -21,14 +21,14 @@ export default function Flashcard() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {[1, 2, 3, 4].map((item, index) => {
+        {cards.map(({ front, back, hint }: any, index: number) => {
           return (
             <SwiperSlide>
               <Card
                 index={index}
-                total={4}
-                front={"Noun"}
-                back={"A name of any person, animal, place or thing"}
+                total={cards.length}
+                front={front}
+                back={back}
               />
             </SwiperSlide>
           );

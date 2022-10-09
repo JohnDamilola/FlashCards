@@ -28,12 +28,12 @@ def signup():
             user = user,
             message = 'Registered Successfully',
             status = 201
-        )
+        ), 201
     except:
         return jsonify(
             message = 'Registration Failed',
             status = 400
-        )
+        ), 400
 
 @auth_bp.route('/login', methods=['POST'])
 @cross_origin(supports_credentials=True)
@@ -47,13 +47,13 @@ def login():
         return jsonify(
             user = user,
             message = 'Login Successful',
-            status = 201
-        )
+            status = 200
+        ), 200
     except:
         return jsonify(
             message = 'Login Failed',
             status = 400
-        )
+        ), 400
 
 if __name__ == '__main__':
     app.debug = True

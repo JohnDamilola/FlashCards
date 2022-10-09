@@ -182,10 +182,17 @@
         }
     }
 
+    h3.title {
+        // font-size: 18px;
+        font-weight: 600;
+        color: #221daf;
+        margin-bottom: 28px;
+    }
+
     p {
         font-size: 18px;
         font-weight: 600;
-        color: #fff;
+        color: #221daf;
     }
 
     .btn {
@@ -199,6 +206,11 @@
         }
     }
 
+    .btn-mains {
+        border: 2px solid #221daf;
+        color: #221daf;
+    }
+
     .flash-card__content {
         border-radius: 8px;
         background-color: #fff;
@@ -206,13 +218,13 @@
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         
         .header {
-            background: #f2f2f2;
+            background: #221daf;
             padding: 10px 30px;
             border-radius: 8px 8px 0px 0px;
             border-bottom: 2px solid #dddddd;
             span, i {
                 font-size: 20px;
-                color: #000;
+                color: #fff;
                 margin-bottom: 0px;
             }
             span {
@@ -226,5 +238,10 @@
         label {
             color: #000;
         }
+    }
+    .btn-submit {
+        background: #221daf;
+        color: #fff;
+        margin-bottom: 120px;
     }
 }

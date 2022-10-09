@@ -2,6 +2,11 @@ import "./styles.scss";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ isDashboard }: any) => {
+
+  const handleLogout = () => {
+    window.localStorage.removeItem('flashCardUser')
+    window.location.replace('/')
+  }
   return (
     <nav className="navbar navbar-expand-lg sticky-top">
       <div className="container">
@@ -26,6 +31,9 @@ const Navbar = ({ isDashboard }: any) => {
                   <span className=''>Create Deck</span>
                 </button>
               </Link>
+              <li className="nav-item" onClick={handleLogout} style={{cursor: 'pointer', fontWeight: '600'}}>
+                  <i className="lni lni-cross-circle mr-2" style={{fontWeight: '600'}}></i> Logout
+              </li>
             </div>
           ) : (
             <div className="navbar-nav ml-auto navbar-centers gap-4">

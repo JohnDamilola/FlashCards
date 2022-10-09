@@ -11,6 +11,7 @@ interface Deck {
   title: string;
   description: string;
   visibility: string;
+  cards_count: number;
 }
 
 const Explore = () => {
@@ -27,11 +28,8 @@ const Explore = () => {
 
   const fetchDecks = async () => {
     setFetchingDecks(true);
-    const params = { localId };
     await http
-      .get("/deck/all", {
-        params,
-      })
+      .get("/deck/all")
       .then((res) => {
         const { decks: _decks } = res.data || {};
         setDecks(_decks);
@@ -50,7 +48,8 @@ const Explore = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="masthead">
-                <h2>Find flashcards that interests you.</h2>
+                <h2>Explore flashcards that interests you.</h2>
+                <p>Search and explore public decks that may interest you</p>
               </div>
             </div>
           </div>
@@ -97,7 +96,7 @@ const Explore = () => {
                     }
                   })
                   .map(
-                    ({ id, title, description, visibility }, index) => {
+                    ({ id, title, description, visibility, cards_count }, index) => {
                       return (
                         <div className="col-md-4">
                           <Link
@@ -114,7 +113,7 @@ const Explore = () => {
                                 ) : null}
                               </div>
                               <p className="description">{description}</p>
-                              <p className="items-count">4 items</p>
+                              <p className="items-count">{cards_count} item(s)</p>
 
                               <div className="bottom-section">
                                 <p>Created by you 2 days ago</p>

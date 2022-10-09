@@ -33,6 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start-backend": "cd ../backend && env/bin/flask run --no-debugger",
+    "deploy": "react-scripts build && firebase deploy",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
