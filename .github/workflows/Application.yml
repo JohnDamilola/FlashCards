@@ -37,3 +37,4 @@ jobs:
     - name: Run Tests
       run: |
         python3 backend/test/DeckTest.py
+        python3 backend/test/AuthTest.py
