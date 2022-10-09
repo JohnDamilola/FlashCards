@@ -110,14 +110,13 @@ def create():
 def update(id):
     try:
         data = request.get_json()
-        deckid = id
         localId = data['localId']
         title = data['title']
         description = data['description']
         visibility = data['visibility']
         
-        db.child("deck").order_by_child("deckid").equal_to(f"{localId}_{deckid}").update({
-            "deckid":f"{localId}_{deckid}","userId": localId, "title": title, "description": description, "visibility" : visibility
+        db.child("deck").child(id).update({
+            "userId": localId, "title": title, "description": description, "visibility" : visibility
         })
         
         return jsonify(

@@ -34,7 +34,7 @@ const CreateDeck = () => {
           confirmButtonColor: '#221daf',
         }).then(() => {
           setIsSubmitting(false);
-          window.location.replace(`/deck/${id}/practice`);
+          window.location.replace(`/dashboard`);
         })
       })
       .catch((err) => {
