@@ -1,8 +1,10 @@
 from flask import Blueprint, jsonify, request
 from flask_cors import cross_origin
-import sys
-sys.path.append("..")
-from __init__ import firebase
+try:
+    from .. import firebase
+except ImportError:
+    from __init__ import firebase
+
 
 deck_bp = Blueprint(
     'deck_bp', __name__
