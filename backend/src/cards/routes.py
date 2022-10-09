@@ -1,5 +1,5 @@
 # backend/src/card/routes.py
-
+#routes.py is a file in cards folder that has all the functions defined that manipulate the cards. All CRUD functions that needs to be performed on cards are defined here.
 from flask import Blueprint, jsonify, request
 from flask_cors import cross_origin
 try:
@@ -13,6 +13,7 @@ card_bp = Blueprint(
 
 db = firebase.database()
 
+#This method is called when the user want to fetch all of the cards in a deck. Only the deckid is required to fetch all cards from the required deck.
 @card_bp.route('/deck/<deckId>/card/all', methods = ['GET'])
 @cross_origin(supports_credentials=True)
 def getcards(deckId):
@@ -31,6 +32,8 @@ def getcards(deckId):
             status = 400
         ), 400
 
+#This method is routed when the user requests to create new cards in a deck. 
+#Only the deckid is required to add cards to a deck.
 @card_bp.route('/deck/<deckId>/card/create', methods = ['POST'])
 @cross_origin(supports_credentials=True)
 def createcards(deckId):
@@ -64,6 +67,8 @@ def createcards(deckId):
             status = 400
         ), 400
 
+#This method is called when the user requests to update cards in a deck. The card can be updated in terms of its word and meaning.
+#Here deckid and cardid is required to uniquely identify a updating card.
 @card_bp.route('/deck/<id>/update/<cardid>', methods = ['PATCH'])
 @cross_origin(supports_credentials=True)
 def updatecard(id,cardid):
@@ -87,7 +92,8 @@ def updatecard(id,cardid):
             message = f'Update Card Failed {e}',
             status = 400
         ), 400
-        
+ 
+#This method is called when the user requests to delete the card. The deckid and the particular cardid is required to delete the card.
 @card_bp.route('/deck/<id>/delete/<cardid>', methods = ['DELETE'])
 @cross_origin(supports_credentials=True)
 def deletecard(id,cardid):
