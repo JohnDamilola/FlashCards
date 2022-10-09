@@ -1,13 +1,15 @@
-# Run the following command. <br/> `npm start` is the command to run frontend server.
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Setup Frontend Server
+
+Run the following command. <br/> `npm start` is the command to run frontend server.
 ```
 cd [location of the git repository]/frontend
 npm install
 npm start
 ```
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
