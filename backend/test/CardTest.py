@@ -7,9 +7,9 @@ class TestApp(unittest.TestCase):
     def setUp(self):
         self.app=create_app().test_client()
 
-    def test_deck_all_route(self):
+    def test_deck_all_route(self, deckId):
         '''Test the deck/all route of our app'''
-        response=self.app.get('/deck/all',query_string=dict(localId='Test'))
+        response=self.app.get(f'/deck/{deckId}/card/all',query_string=dict(localId='Test'))
         assert response.status_code==200
     
 
@@ -18,9 +18,9 @@ class TestApp(unittest.TestCase):
         response=self.app.post('/deck/all')
         assert response.status_code==405
 
-    def test_create_deck_route(self):
+    def test_create_deck_route(self, deckId):
         '''Test the create deck route of our app'''
-        response=self.app.post('/deck/create')
+        response=self.app.post(f'/deck/{deckId}/card/create')
         assert response.status_code==201
 
 if __name__=="__main__":
