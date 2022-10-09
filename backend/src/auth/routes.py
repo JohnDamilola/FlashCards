@@ -40,9 +40,6 @@ def signup():
 @auth_bp.route('/login', methods=['POST'])
 @cross_origin(supports_credentials=True)
 def login():
-    data = request.get_json()
-    email = data['email']
-    password = data['password']
     try:
         data = request.get_json()
         email = data['email']
