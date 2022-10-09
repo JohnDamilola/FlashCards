@@ -3,7 +3,7 @@ import DashboardLayout from 'layouts/DashboardLayout'
 import HomeLayout from 'layouts/HomeLayout'
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router'
-import { authRoutes, dashboardRoutes, publicRoutes } from './routes'
+import { authRoutes, dashboardRoutes, homeRoutes, publicRoutes } from './routes'
 import "swiper/css/bundle";
 
 const App = () => {
@@ -13,12 +13,21 @@ const App = () => {
     window.scrollTo(0, 0)
   }, [location])
 
+  const flashCardUser = window.localStorage.getItem('flashCardUser');
+  const isAuth = flashCardUser && JSON.parse(flashCardUser) ? true : false;
+
   return (
     <>
       <Routes>
         <Route element={<HomeLayout />}>
-          {publicRoutes.map(({ path, element }: any, index: number) => (
+          {homeRoutes.map(({ path, element }: any, index: number) => (
             <Route path={path} element={element} key={index} />
+          ))}
+        </Route>
+
+        <Route element={isAuth ? <DashboardLayout /> : <HomeLayout />}>
+          {publicRoutes.map(({ path, element }: any, index: number) => (
+              <Route path={path} element={element} key={index} />
           ))}
         </Route>
 

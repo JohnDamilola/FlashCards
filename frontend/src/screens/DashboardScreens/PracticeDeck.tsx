@@ -9,6 +9,7 @@ import "./styles.scss";
 
 interface Deck {
   id: string;
+  userId: string;
   title: string;
   description: string;
   visibility: string;
@@ -26,6 +27,9 @@ const PracticeDeck = () => {
   const [cards, setCards] = useState<Card[]>([]);
   const [fetchingDeck, setFetchingDeck] = useState(false);
   const [fetchingCards, setFetchingCards] = useState(false);
+
+  const flashCardUser = window.localStorage.getItem("flashCardUser");
+  const { localId } = (flashCardUser && JSON.parse(flashCardUser)) || {};
 
   const { id } = useParams();
 
@@ -62,7 +66,7 @@ const PracticeDeck = () => {
       });
   };
 
-  const { title, description } = deck || {};
+  const { title, description, userId } = deck || {};
 
   return (
     <div className="dashboard-page dashboard-commons">
@@ -86,9 +90,12 @@ const PracticeDeck = () => {
                       <p className="">{description}</p>
                     </div>
                   </div>
-                  <Link to={`/deck/${id}/update`}>
-                    <button className="btn btn-white">Update Deck</button>
-                  </Link>
+                  {
+                    localId === userId &&
+                    <Link to={`/deck/${id}/update`}>
+                      <button className="btn btn-white">Update Deck</button>
+                    </Link>
+                  }
                 </div>
               </Card>
             </div>

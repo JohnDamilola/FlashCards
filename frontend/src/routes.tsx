@@ -7,10 +7,22 @@ import Explore from 'screens/DashboardScreens/Explore'
 import PracticeDeck from 'screens/DashboardScreens/PracticeDeck'
 import Home from 'screens/Home'
 
-const publicRoutes = [
+const homeRoutes = [
   {
     path: '/',
     element: <Home />,
+  }
+]
+
+const publicRoutes = [
+  {
+    path: '/explore',
+    element: <Explore />,
+  },
+  {
+    exact: true,
+    path: '/deck/:id/practice',
+    element: <PracticeDeck />,
   },
 ]
 
@@ -54,4 +66,4 @@ const dashboardRoutes = [
   }
 ]
 
-export { authRoutes, publicRoutes, dashboardRoutes }
+export { homeRoutes, authRoutes, publicRoutes, dashboardRoutes }

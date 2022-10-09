@@ -99,10 +99,7 @@ const Explore = () => {
                     ({ id, title, description, visibility, cards_count }, index) => {
                       return (
                         <div className="col-md-4">
-                          <Link
-                            aria-current="page"
-                            to={"/deck/" + id + "/" + title}
-                          >
+                          <Link to={`/deck/${id}/practice`}>
                             <div className="flash-card__item">
                               <div className="d-flex justify-content-between align-items-center">
                                 <h5>{title}</h5>
@@ -114,10 +111,6 @@ const Explore = () => {
                               </div>
                               <p className="description">{description}</p>
                               <p className="items-count">{cards_count} item(s)</p>
-
-                              <div className="bottom-section">
-                                <p>Created by you 2 days ago</p>
-                              </div>
                             </div>
                           </Link>
                         </div>
