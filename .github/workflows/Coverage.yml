@@ -30,7 +30,6 @@ jobs:
               run: |
                   export CI=GITHUB_ACTIONS
                   coverage run -m backend.test.AuthTest
-                  coverage run -m backend.test.DeckTest
                   coverage xml
             - name: Upload to CodeCov
               run: |
