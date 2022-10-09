@@ -39,8 +39,8 @@ A spaced repetition learning platform to <b>create</b>, <b>memorize</b> and <b>s
 <a href=""><img src="https://img.shields.io/badge/Ant%20Design-1890FF?style=for-the-badge&logo=antdesign&logoColor=white" /></a>
 
 ## Getting started & Installation:
-- Backend [See README.md](https://github.com/JohnDamilola/FlashCards/blob/main/Contributing.md)
-- Frontend [See README.md](https://github.com/JohnDamilola/FlashCards/blob/main/Contributing.md)
+- Backend [See README.md](https://github.com/JohnDamilola/FlashCards/blob/main/backend/Readme.md)
+- Frontend [See README.md](https://github.com/JohnDamilola/FlashCards/blob/main/frontend/README.md)
 
 ## Future Roadmap
 ### Phase 1:
