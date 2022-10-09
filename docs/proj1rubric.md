@@ -9,7 +9,7 @@
 |Issues reports: there are **many**|3|https://github.com/JohnDamilola/FlashCards/issues|
 |Issues are being closed|3|https://github.com/JohnDamilola/FlashCards/issues|
 |DOI badge: exists|3|https://zenodo.org/record/7165120#.Y0McjuzMK3I|
-|Docs: doco generated, format not ugly |2|https://github.com/JohnDamilola/FlashCards/commit/560a3a82cddc9eff9d7d86c9b32db7bee0203ec0|
+|Docs: doco generated, format not ugly |2|https://github.com/JohnDamilola/FlashCards/commit/main|
 |Docs: what: point descriptions of each class/function (in isolation) || |
 |Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|||
 |Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|||
