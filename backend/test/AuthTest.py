@@ -20,12 +20,12 @@ class TestApp(unittest.TestCase):
 
     def test_signup_route(self):
         '''Test the signup route of our app'''
-        response=self.app.post('/signup')
-        assert response.status_code==200
+        response=self.app.post('/signup',data=dict(email='test@gmail.com',password='testpassword'))
+        assert response.status_code==201
         
     def test_login_route(self):
         '''Test the login route of our app'''
-        response=self.app.post('/login')
+        response=self.app.post('/login',data=dict(email='test@gmail.com',password='testpassword'))
         assert response.status_code==200
    
 
