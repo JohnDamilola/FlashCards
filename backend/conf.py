@@ -18,10 +18,7 @@ release = '1'
 
 import sys, os
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(1, os.path.abspath('src'))
-sys.path.insert(2, os.path.abspath('src/auth'))
-sys.path.insert(3, os.path.abspath('src/cards'))
-sys.path.insert(4, os.path.abspath('src/deck'))
+sys.path.insert(1, os.path.abspath('Documentation'))
 
 extensions = ['sphinx.ext.autodoc']
 
