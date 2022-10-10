@@ -50,7 +50,7 @@ https://user-images.githubusercontent.com/17693596/194787705-309ebf62-2a3d-4075-
 - Frontend [See README.md](https://github.com/JohnDamilola/FlashCards/blob/main/frontend/README.md)
 
 ## Demo Links
-- Backend API Endpoint URL: https://flashcards-server-api.herokuapp.com/
+- Backend API Endpoint URL: https://flashcards-server-api.herokuapp.com/ [Docs](https://github.com/JohnDamilola/FlashCards/blob/main/backend/api-docs.md)
 - Frontend: https://flashcards-519da.web.app/
 
 ## Current Screens
