@@ -23,16 +23,16 @@
 |Test cases exist|3|https://github.com/JohnDamilola/FlashCards/tree/main/backend/test|
 |Test cases are routinely executed|3|github action:https://github.com/JohnDamilola/FlashCards/actions |
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|https://github.com/JohnDamilola/FlashCards/blob/main/Contributing.md|
-|Issues are discussed before they are closed|3| https://github.com/JohnDamilola/FlashCards/issues?q=is%3Aissue+is%3Aclosed|
+|Issues are discussed before they are closed|3|https://github.com/JohnDamilola/FlashCards/issues/12|
 |Chat channel: exists|3|<table><tr><td valign="center">Whatsapp:<br> <img src="https://user-images.githubusercontent.com/112131763/194785019-9b6c6d37-d3eb-4967-b4a2-3eaa60363012.jpeg" height="600px" width="auto"></img></td></tr></table>|
-|Test cases: a large proportion of the issues related to handling failing cases.|3|https://github.com/JohnDamilola/FlashCards/issues |
+|Test cases: a large proportion of the issues related to handling failing cases.|3|https://github.com/JohnDamilola/FlashCards/issues/26|
 |Evidence that the whole team is using the same tools: everyone can get to all tools and files|3| Everyone is using the same tools|
-|Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|3|There is a requirement file. |
+|Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|3|https://github.com/JohnDamilola/FlashCards/blob/main/backend/requirements.txt|
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3|Everyone is using the same tools|
 |Evidence that the members of the team are working across multiple places in the code base|3|https://github.com/JohnDamilola/FlashCards/commits/main|
-|Short release cycles |3|The team commits very frequently. https://github.com/JohnDamilola/FlashCards/graphs/commit-activity|
-|Does your website and documentation provide a clear, high-level overview of your software?|3|https://github.com/JohnDamilola/FlashCards|
-|Does your website and documentation clearly describe the type of user who should use your software?|3|https://github.com/JohnDamilola/FlashCards|
+|Short release cycles |3|The team commits very frequently. https://github.com/JohnDamilola/FlashCards/graphs/commit-activity Release: https://github.com/JohnDamilola/FlashCards/releases|
+|Does your website and documentation provide a clear, high-level overview of your software?|3|Website: https://flashcards-519da.web.app/ Repo:https://github.com/JohnDamilola/FlashCards|
+|Does your website and documentation clearly describe the type of user who should use your software?|3|https://github.com/JohnDamilola/FlashCards/blob/main/README.md|
 |Do you publish case studies to show how your software has been used by yourself and others?|||
 |Is the name of your project/software unique?|2|https://github.com/JohnDamilola/FlashCards|
 |Is your project/software name free from trademark violations?|2|We have used a previous year's project which was open source and worked on it.|
@@ -101,6 +101,3 @@
 |Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?|||
 |Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?|||
 |Do you make timely announcements of the deprecation of components, APIs, etc.?|||
-
-
-
