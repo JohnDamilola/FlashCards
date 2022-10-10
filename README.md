@@ -15,7 +15,7 @@
 <img src="https://github.com/JohnDamilola/FlashCards/actions/workflows/Application.yml/badge.svg?style=plastic?branch=main"/> </a>
 <a href="https://github.com/JohnDamilola/FlashCards/actions/workflows/Coverage.yml/badge.svg" alt="Code coverage">
 <img src="https://github.com/JohnDamilola/FlashCards/actions/workflows/Coverage.yml/badge.svg"/> </a>
-<a href="https://codecov.io/github/JohnDamilola/FlashCards/branch/main/graph/badge.svg" alt="Codecov">
+<a href="https://app.codecov.io/gh/JohnDamilola/FlashCards" alt="Codecov">
 <img src="https://codecov.io/github/JohnDamilola/FlashCards/branch/main/graph/badge.svg"/> </a>
 <a href="https://zenodo.org/badge/latestdoi/539553646" alt="DOI">
 <img src="https://zenodo.org/badge/539553646.svg"/> </a>
