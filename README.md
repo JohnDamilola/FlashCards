@@ -81,6 +81,11 @@ A spaced repetition learning platform to <b>create</b>, <b>memorize</b> and <b>s
 ## Contributions to the Project
 Please refer to the [Contributing.md](https://github.com/JohnDamilola/FlashCards/blob/main/Contributing.md) if you want to contrbute to the FlashCards source code. Follow all the guidelines mentioned and raise a pull request for the developers to review before the code goes to the main source code.
 
+## Help
+
+Email any queries to the contributors -
+[Swarangi Gaurkar](sgaurka@ncsu.edu)
+
 ## Authors 
 
 1. [Kritika Javali](https://github.com/ksjavali)
