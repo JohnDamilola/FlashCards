@@ -106,3 +106,6 @@ Email any queries to the contributors -
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
+
+##Funding
+Our project at the moment is not funded by any organization/individual.
