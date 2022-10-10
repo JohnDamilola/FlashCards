@@ -24,9 +24,6 @@
 <a href="https://img.shields.io/github/release/JohnDamilola/FlashCards?color=brightblue" alt="Release">
 <img src="https://img.shields.io/github/release/JohnDamilola/FlashCards?color=brightblue"/> </a>
 </p>
-<p align='center'>
-A spaced repetition learning platform to <b>create</b>, <b>memorize</b> and <b>share</b> your knowledge list using flashcards.
-</p>
 
 ## Description
 Are you a student and having trouble preparing for tests and exams? Look no further. FlashCards also helps you memorize all that hard-to-remember information with online flashcards so that you ace your exams!
