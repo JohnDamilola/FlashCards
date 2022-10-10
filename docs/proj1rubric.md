@@ -72,17 +72,17 @@
 |Does your documentation list all third-party dependencies?|3|Yes: https://github.com/JohnDamilola/FlashCards/blob/main/requirements|
 |Does your documentation list the version number for all third-party dependencies?|3|Yes: https://github.com/JohnDamilola/FlashCards/blob/main/requirements|
 |Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional?|3|Yes|
-|Can you download dependencies using a dependency management tool or package manager? e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/)|3|Yes|
+|Can you download dependencies using a dependency management tool or package manager? e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/)|3|Yes, we have used pip|
 |Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful?|3|Yes: https://github.com/JohnDamilola/FlashCards/actions/workflows/Application.yml|
 |Do you have an automated test suite for your software?|3|Yes|
-|Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?|3||
-|Do you use continuous integration, automatically running tests whenever changes are made to your source code?|||
-|Are your test results publicly visible?|||
-|Are all manually-run tests documented?|||
-|Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? e.g. release announcements, publications, workshops, conference presentations|||
-|Does your website state how many projects and users are associated with your project?|||
-|Do you provide success stories on your website?|||
-|Do you list your important partners and collaborators on your website?|||
+|Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?|3|Yes|
+|Do you use continuous integration, automatically running tests whenever changes are made to your source code?|3|Yes|
+|Are your test results publicly visible?|3|Yes: https://github.com/JohnDamilola/FlashCards/actions/workflows/Application.yml|
+|Are all manually-run tests documented?|3|Yes|
+|Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? e.g. release announcements, publications, workshops, conference presentations|N/A|N/A|
+|Does your website state how many projects and users are associated with your project?|3|Yes: Under Authors https://github.com/JohnDamilola/FlashCards|
+|Do you provide success stories on your website?|N/A|N/A|
+|Do you list your important partners and collaborators on your website?|3|Yes:Under Authors https://github.com/JohnDamilola/FlashCards|
 |Do you list your project's publications on your website or link to a resource where these are available?|||
 |Do you list third-party publications that refer to your software on your website or link to a resource where these are available?|||
 |Can users subscribe to notifications to changes to your source code repository?|||
