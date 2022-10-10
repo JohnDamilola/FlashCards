@@ -6,6 +6,9 @@
   />
 </p>
 <p align="center">
+  <a href="https://github.com/JohnDamilola/FlashCards/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/johndamilola/flashcards?style=plastic"></a>
+  <img src="https://img.shields.io/github/languages/count/johndamilola/flashcards">
   <a href="https://github.com/JohnDamilola/FlashCards/graphs/contributors" alt="Contributors">
 <img src="https://img.shields.io/github/contributors/JohnDamilola/FlashCards?style=plastic"/> </a>
 <a href="https://github.com/JohnDamilola/FlashCards/actions/workflows/Application.yml" alt="Python application">
