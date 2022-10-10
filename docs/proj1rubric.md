@@ -1,7 +1,7 @@
 # [Repository](https://github.com/JohnDamilola/FlashCards)
-|Notes          |             Score =           |Evidence|
+|Notes          |             Score =  268/273         |Evidence|
 |---------------|-------------------------------|------|
-|Video1|N/A|N/A| 
+|Video1|3|https://github.com/JohnDamilola/FlashCards/blob/main/docs/Boast%20video.mp4| 
 |Video2|N/A|N/A| 
 |Workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)|3|https://github.com/JohnDamilola/FlashCards/graphs/contributors|
 |Number of commits|3|https://github.com/JohnDamilola/FlashCards/graphs/commit-activity|
