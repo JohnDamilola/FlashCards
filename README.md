@@ -24,8 +24,7 @@
 <img src="https://img.shields.io/tokei/lines/github/johndamilola/flashcards?style=plastic">
 <a href="https://github.com/JohnDamilola/FlashCards/issues">
   <img src="https://img.shields.io/github/issues-raw/johndamilola/flashcards?style=plastic"></a>
- <a href="https://github.com/JohnDamilola/FlashCards/issues?q=is%3Aissue+is%3Aclosed">
-   <img src="https://github.com/JohnDamilola/FlashCards/issues?style=plastic"></a>
+
 
 <a href="https://img.shields.io/github/release/JohnDamilola/FlashCards?color=brightblue" alt="Release">
 <img src="https://img.shields.io/github/release/JohnDamilola/FlashCards?color=brightblue"/> </a>
