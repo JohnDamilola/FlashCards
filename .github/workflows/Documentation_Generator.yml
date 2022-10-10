@@ -9,6 +9,10 @@ jobs:
 
         steps:
             - uses: actions/checkout@v3
+            - name: Install dependencies
+              run: |
+                    python -m pip install --upgrade pip
+                    if [ -f backend/test/requirements.txt ]; then pip install -r backend/test/requirements.txt; fi
             - run: pip install -U sphinx
             - run: chmod u+x backend
             - run: chmod u+x backend/Documentation
