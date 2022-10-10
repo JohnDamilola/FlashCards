@@ -23,7 +23,7 @@
 |Test cases exist|3|https://github.com/JohnDamilola/FlashCards/tree/main/backend/test|
 |Test cases are routinely executed|3|github action:https://github.com/JohnDamilola/FlashCards/actions |
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|https://github.com/JohnDamilola/FlashCards/blob/main/Contributing.md|
-|Issues are discussed before they are closed|3| https://github.com/JohnDamilola/FlashCards/issues?q=is%3Aissue+is%3Aclosed|
+|Issues are discussed before they are closed|3|https://github.com/JohnDamilola/FlashCards/issues/12|
 |Chat channel: exists|3|<table><tr><td valign="center">Whatsapp:<br> <img src="https://user-images.githubusercontent.com/112131763/194785019-9b6c6d37-d3eb-4967-b4a2-3eaa60363012.jpeg" height="600px" width="auto"></img></td></tr></table>|
 |Test cases: a large proportion of the issues related to handling failing cases.|3|https://github.com/JohnDamilola/FlashCards/issues |
 |Evidence that the whole team is using the same tools: everyone can get to all tools and files|3| Everyone is using the same tools|
