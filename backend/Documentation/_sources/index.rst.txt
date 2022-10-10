@@ -13,13 +13,13 @@ Welcome to FlashCard's documentation!
 .. automodule:: api
    :members:
 
-.. automodule:: routes
+.. automodule:: auth
    :members:
    
-.. automodule:: routes
+.. automodule:: cards
    :members:
 
-.. automodule:: routes
+.. automodule:: deck
    :members:
 
 Indices and tables
