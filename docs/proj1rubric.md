@@ -9,15 +9,15 @@
 |Issues reports: there are **many**|3|https://github.com/JohnDamilola/FlashCards/issues|
 |Issues are being closed|3|https://github.com/JohnDamilola/FlashCards/issues?q=is%3Aissue+is%3Aclosed|
 |DOI badge: exists|3|https://zenodo.org/record/7178754|
-|Docs: doco generated, format not ugly |2|https://github.com/JohnDamilola/FlashCards/commit/main|
+|Docs: doco generated, format not ugly |3|https://github.com/JohnDamilola/FlashCards/commit/main|
 |Docs: what: point descriptions of each class/function (in isolation) |3|All functions and classes have descriptions |
-|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|2|https://github.com/JohnDamilola/FlashCards|
-|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|2|https://github.com/JohnDamilola/FlashCards|
+|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|3|https://github.com/JohnDamilola/FlashCards|
+|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3|https://github.com/JohnDamilola/FlashCards|
 |Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|3|https://github.com/JohnDamilola/FlashCards|
 |Use of version control tools|3|GIT is used|
-|Use of style checkers || |
-|Use of code formatters. |||
-|Use of syntax checkers. |||
+|Use of style checkers |3|https://github.com/JohnDamilola/FlashCards/blob/main/.github/workflows/Application.yml |
+|Use of code formatters. |3|https://github.com/JohnDamilola/FlashCards/blob/main/.github/workflows/Application.yml|
+|Use of syntax checkers. |3|https://github.com/JohnDamilola/FlashCards/blob/main/.github/workflows/Application.yml|
 |Use of code coverage |3|https://github.com/JohnDamilola/FlashCards/blob/main/.github/workflows/Coverage.yml|
 |Other automated analysis tools|3|github actions: https://github.com/JohnDamilola/FlashCards/actions |
 |Test cases exist|3|https://github.com/JohnDamilola/FlashCards/tree/main/backend/test|
