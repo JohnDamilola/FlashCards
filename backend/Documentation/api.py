@@ -29,9 +29,9 @@ def create_app():
     app = Flask(__name__, instance_relative_config=False)
 
     with app.app_context():
-        from auth.routes import auth_bp
-        from deck.routes import deck_bp
-        from cards.routes import card_bp
+        from auth import auth_bp
+        from deck import deck_bp
+        from cards import card_bp
 
         # Register Blueprints
         app.register_blueprint(auth_bp)
