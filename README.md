@@ -20,6 +20,8 @@
 <img src="https://img.shields.io/badge/python-v3.8+-yellow.svg"/> </a>
 <a href="https://img.shields.io/github/repo-size/JohnDamilola/FlashCards?color=brightgreen" alt="Repo size">
 <img src="https://img.shields.io/github/repo-size/JohnDamilola/FlashCards?color=brightgreen"/> </a>
+  <img src="https://img.shields.io/github/languages/top/JohnDamilola/Flashcards?style=plastic"
+  
 
 <a href="https://img.shields.io/github/release/JohnDamilola/FlashCards?color=brightblue" alt="Release">
 <img src="https://img.shields.io/github/release/JohnDamilola/FlashCards?color=brightblue"/> </a>
