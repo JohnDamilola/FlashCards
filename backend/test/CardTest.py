@@ -3,7 +3,7 @@ sys.path.append('backend/src')
 import unittest
 from api import create_app
 
-class TestApp(unittest.TestCase):
+class CardTestApp(unittest.TestCase):
     def setUp(self):
         self.app=create_app().test_client()
 
