@@ -31,19 +31,19 @@
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3|Everyone is using the same tools|
 |Evidence that the members of the team are working across multiple places in the code base|3|https://github.com/JohnDamilola/FlashCards/commits/main|
 |Short release cycles |3|The team commits very frequently. https://github.com/JohnDamilola/FlashCards/graphs/commit-activity|
-|Does your website and documentation provide a clear, high-level overview of your software?|||
-|Does your website and documentation clearly describe the type of user who should use your software?|||
+|Does your website and documentation provide a clear, high-level overview of your software?|3|https://github.com/JohnDamilola/FlashCards|
+|Does your website and documentation clearly describe the type of user who should use your software?|3|https://github.com/JohnDamilola/FlashCards|
 |Do you publish case studies to show how your software has been used by yourself and others?|||
-|Is the name of your project/software unique?|||
-|Is your project/software name free from trademark violations?|||
-|Is your software available as a package that can be deployed without building it?|||
-|Is your software available for free?|||
+|Is the name of your project/software unique?|2|https://github.com/JohnDamilola/FlashCards|
+|Is your project/software name free from trademark violations?|2|We have used a previous year's project which was open source and worked on it.|
+|Is your software available as a package that can be deployed without building it?|3|No|
+|Is your software available for free?|3|Yes, it is available for free.|
 |Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository?|||
-|Is your software hosted in an established, third-party repository likeGitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)?|||
-|Is your documentation clearly available on your website or within your software?|||
-|Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use?|||
-|If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software?|||
-|Do you provide a comprehensive guide to all your software’s commands, functions and options?|||
+|Is your software hosted in an established, third-party repository likeGitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)?|3|Github: https://github.com/JohnDamilola/FlashCards|
+|Is your documentation clearly available on your website or within your software?|3|Yes: https://github.com/JohnDamilola/FlashCards/commit/5f79eccab3bad51db7cb21b0095c46c0853a45a7|
+|Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use?|3|Yes:Backend: https://github.com/JohnDamilola/FlashCards/blob/main/backend/Readme.md Frontend: https://github.com/JohnDamilola/FlashCards/blob/main/frontend/README.md|
+|If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software?|3|Yes:Backend: https://github.com/JohnDamilola/FlashCards/blob/main/backend/Readme.md Frontend: https://github.com/JohnDamilola/FlashCards/blob/main/frontend/README.md|
+|Do you provide a comprehensive guide to all your software’s commands, functions and options?|3|Yes:Backend: https://github.com/JohnDamilola/FlashCards/blob/main/backend/Readme.md Frontend: https://github.com/JohnDamilola/FlashCards/blob/main/frontend/README.md|
 |Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages?|||
 |If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation?|||
 |Do you store your documentation under revision control with your source code?|||
