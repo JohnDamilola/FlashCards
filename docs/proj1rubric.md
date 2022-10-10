@@ -92,7 +92,7 @@
 |Is your contributions' policy publicly available?|3|Yes: https://github.com/JohnDamilola/FlashCards/blob/main/Contributing.md|
 |Do contributors keep the copyright/IP of their contributions?|N/A|N/A|
 |Does your website and documentation clearly state the copyright owners of your software and documentation?|3|Yes: https://tldrlegal.com/license/mit-license|
-|Does each of your source code files include a copyright statement?|3|Yes|
+|Does each of your source code files include a copyright statement?|3|Yes- https://github.com/JohnDamilola/FlashCards/blob/main/images/licence_header_srcfiles.png|
 |Does your website and documentation clearly state the licence of your software?|3|Yes: https://tldrlegal.com/license/mit-license|
 |Is your software released under an open source licence?|3|Yes: https://tldrlegal.com/license/mit-license|
 |Is your software released under an OSI-approved open-source licence?|3|Yes: https://tldrlegal.com/license/mit-license|
