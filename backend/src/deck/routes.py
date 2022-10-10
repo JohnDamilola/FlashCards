@@ -1,27 +1,26 @@
-"""
-MIT License
+#MIT License
+#
+#Copyright (c) 2022 John Damilola, Leo Hsiang, Swarangi Gaurkar, Kritika Javali, Aaron Dias Barreto
+#
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+#
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
 
-Copyright (c) 2022 John Damilola, Leo Hsiang, Swarangi Gaurkar, Kritika Javali, Aaron Dias Barreto
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-'''#routes.py is a file in deck folder that has all the functions defined that manipulate the deck. All CRUD functions are defined here.'''
+'''routes.py is a file in deck folder that has all the functions defined that manipulate the deck. All CRUD functions are defined here.'''
 from flask import Blueprint, jsonify, request
 from flask_cors import cross_origin
 #try:
@@ -36,10 +35,11 @@ deck_bp = Blueprint(
 
 db = firebase.database()
 
-'''This method is called when we want to fetch one of the decks, we pass deckid of this deck'''
+
 @deck_bp.route('/deck/<id>', methods = ['GET'])
 @cross_origin(supports_credentials=True)
 def getdeck(id):
+    '''This method is called when we want to fetch one of the decks, we pass deckid of this deck'''
     try:
         deck = db.child("deck").child(id).get()
         return jsonify(
@@ -54,12 +54,13 @@ def getdeck(id):
             status = 400
         ), 400
 
-'''This method is called when we want to fetch all of the decks. Here, we check if the user is authenticated, 
-if yes show all the decks made by the user including the ones with private vissibility. if the user is not 
-authenticated then only show decks that have public vissibility.'''
+
 @deck_bp.route('/deck/all', methods = ['GET'])
 @cross_origin(supports_credentials=True)
 def getdecks():
+    '''This method is called when we want to fetch all of the decks. Here, we check if the user is authenticated, 
+    if yes show all the decks made by the user including the ones with private vissibility. if the user is not 
+    authenticated then only show decks that have public vissibility.'''
     args = request.args
     localId = args and args['localId']
     try:
@@ -102,10 +103,11 @@ def getdecks():
         ), 400
 
 
-'''This method is routed when the user requests to create a new deck. To create a new deck, userID, title, description and vissibility are the input required.'''
+
 @deck_bp.route('/deck/create', methods = ['POST'])
 @cross_origin(supports_credentials=True)
 def create():
+    '''This method is routed when the user requests to create a new deck. To create a new deck, userID, title, description and vissibility are the input required.'''
     try:
         data = request.get_json()
         localId = data['localId']
@@ -127,10 +129,11 @@ def create():
             status = 400
         ), 400
 
-'''This method is called when the user requests to update the deck. The deck can be updated in terms of its title, description and vissibility.'''
+
 @deck_bp.route('/deck/update/<id>', methods = ['PATCH'])
 @cross_origin(supports_credentials=True)
 def update(id):
+    '''This method is called when the user requests to update the deck. The deck can be updated in terms of its title, description and vissibility.'''
     try:
         data = request.get_json()
         localId = data['localId']
@@ -152,10 +155,11 @@ def update(id):
             status = 400
         ), 400
  
-'''This method is called when the user requests to delete the deck. Only the deckid is required to delete the deck.'''
+
 @deck_bp.route('/deck/delete/<id>', methods = ['DELETE'])
 @cross_origin(supports_credentials=True)
 def delete(id):
+    '''This method is called when the user requests to delete the deck. Only the deckid is required to delete the deck.'''
     try:
         db.child("deck").child(id).remove()
         
