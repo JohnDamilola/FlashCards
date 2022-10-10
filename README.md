@@ -29,6 +29,7 @@ A spaced repetition learning platform to <b>create</b>, <b>memorize</b> and <b>s
 </p>
 
 ## Watch Flashcards in Action
+https://user-images.githubusercontent.com/17693596/194787705-309ebf62-2a3d-4075-94b4-6da814a953a8.mp4
 
 ## Tech Stack
 <a href="https://flask.palletsprojects.com/en/2.2.x/"><img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" /></a>
