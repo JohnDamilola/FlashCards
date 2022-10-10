@@ -8,9 +8,7 @@
 
 ## Requirements:
 
-```pip install pyrebase4```
-
-```pip install flask ```
+```pip install -r requirements.txt```
 
 ## Setting up Firebase:
 
@@ -24,4 +22,19 @@
 8. Name the web app and copy the "apiKey", "authDomain", "databaseURL", "storageBucket" from the code given there
 9. Go to login.py and app.py, and add the values you copied above
 10. Go to console, click on Authentication (On the left sidebar), click on sign-in method, and enable email/password sign in
+
+
+## Heroku Deployment Steps
+1. ```heroku login```
+
+2. ```heroku create flashcards-server-api```
+
+3. ```heroku create --buildpack https://github.com/heroku/heroku-buildpack-python.git```
+
+4. ```heroku ps:scale web=1```
+
+5. ```git remote add heroku https://git.heroku.com/flashcards-server-api.git```
+
+6. ```git subtree push --prefix backend heroku api-responses-cors:main```
+
 
