@@ -28,7 +28,7 @@ from flask import request
 try:
     from .. import firebase
 except ImportError:
-from __init__ import firebase
+    from __init__ import firebase
 
 auth_bp = Blueprint(
     'auth_bp', __name__
