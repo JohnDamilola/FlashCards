@@ -91,16 +91,15 @@
 |Do you have a contributions policy?|||
 |Is your contributions' policy publicly available?|||
 |Do contributors keep the copyright/IP of their contributions?|||
-|Does your website and documentation clearly state the copyright owners of your software and documentation?|||
-|Does each of your source code files include a copyright statement?|||
-|Does your website and documentation clearly state the licence of your software?|||
-|Is your software released under an open source licence?|||
-|Is your software released under an OSI-approved open-source licence?|||
-|Does each of your source code files include a licence header?|||
-|Do you have a recommended citation for your software?|||
-|Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?|||
-|Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?|||
-|Do you make timely announcements of the deprecation of components, APIs, etc.?|||
+|Does your website and documentation clearly state the copyright owners of your software and documentation?|3|link to image|
+|Does each of your source code files include a copyright statement?|3|https://github.com/JohnDamilola/FlashCards/blob/main/images/licence_header_srcfiles.png|
+|Does your website and documentation clearly state the licence of your software?|3|https://github.com/JohnDamilola/FlashCards/blob/main/LICENSE|
+|Is your software released under an open source licence?|3|https://tldrlegal.com/license/mit-license|
+|Is your software released under an OSI-approved open-source licence?|3|https://tldrlegal.com/license/mit-license|
+|Do you have a recommended citation for your software?|3|https://github.com/JohnDamilola/FlashCards/blob/main/CITATION.cff|
+|Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?|3|https://github.com/JohnDamilola/FlashCards/blob/main/README.md|
+|Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?|3|https://github.com/JohnDamilola/FlashCards/blob/main/README.md|
+|Do you make timely announcements of the deprecation of components, APIs, etc.?|3|https://github.com/JohnDamilola/FlashCards/blob/main/README.md|
 
 
 
