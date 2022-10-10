@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-from flask import Blueprint, jsonify               #import dependancies
+from flask import Blueprint, jsonify               '''import dependancies'''
 from flask import current_app as app
 from flask_cors import cross_origin
 from flask import request
@@ -43,7 +43,8 @@ def index():
 
 @auth_bp.route('/signup', methods=['POST'])
 @cross_origin(supports_credentials=True)
-def signup():                                       #this method is used to create new users and register them in firebase
+def signup():                                       
+    '''this method is used to create new users and register them in firebase'''
     try:
         data = request.get_json()
         email = data['email']
@@ -52,18 +53,19 @@ def signup():                                       #this method is used to crea
         user = auth.create_user_with_email_and_password(email, password)
         return jsonify(
             user = user,                            
-            message = 'Registered Successfully',    #if the registration process is successful, this message is displayed
+            message = 'Registered Successfully',    '''if the registration process is successful, this message is displayed'''
             status = 201
         ), 201
     except:
         return jsonify(
-            message = 'Registration Failed',        #if the registration process is not successful, this message is displayed
+            message = 'Registration Failed',        '''if the registration process is not successful, this message is displayed'''
             status = 400
         ), 400
 
 @auth_bp.route('/login', methods=['POST'])
 @cross_origin(supports_credentials=True)
-def login():                                        #this method is used by registered users to sign in to their account
+def login():                                        
+    '''this method is used by registered users to sign in to their account'''
     try:
         data = request.get_json()
         email = data['email']
@@ -72,12 +74,12 @@ def login():                                        #this method is used by regi
         user = auth.sign_in_with_email_and_password(email, password)
         return jsonify(
             user = user,
-            message = 'Login Successful',           #if login is successful, this message is displayed
+            message = 'Login Successful',           '''if login is successful, this message is displayed'''
             status = 200
         ), 200
     except:
         return jsonify(
-            message = 'Login Failed',               #if login is not successful, this message is displayed
+            message = 'Login Failed',               '''if login is not successful, this message is displayed'''
             status = 400
         ), 400
 
