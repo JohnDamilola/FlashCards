@@ -1,27 +1,27 @@
 # backend/src/card/routes.py
-"""
-MIT License
+#
+#MIT License
+#
+#Copyright (c) 2022 John Damilola, Leo Hsiang, Swarangi Gaurkar, Kritika Javali, Aaron Dias Barreto
+#
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+#
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
 
-Copyright (c) 2022 John Damilola, Leo Hsiang, Swarangi Gaurkar, Kritika Javali, Aaron Dias Barreto
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
 '''routes.py is a file in cards folder that has all the functions defined that manipulate the cards. All CRUD functions that needs to be performed on cards are defined here.'''
 from flask import Blueprint, jsonify, request
 from flask_cors import cross_origin
@@ -36,10 +36,11 @@ card_bp = Blueprint(
 
 db = firebase.database()
 
-'''This method is called when the user want to fetch all of the cards in a deck. Only the deckid is required to fetch all cards from the required deck.'''
+
 @card_bp.route('/deck/<deckId>/card/all', methods = ['GET'])
 @cross_origin(supports_credentials=True)
 def getcards(deckId):
+    '''This method is called when the user want to fetch all of the cards in a deck. Only the deckid is required to fetch all cards from the required deck.'''
     try:
         user_cards = db.child("card").order_by_child("deckId").equal_to(deckId).get()
         cards = [card.val() for card in user_cards.each()]
@@ -55,11 +56,12 @@ def getcards(deckId):
             status = 400
         ), 400
 
-'''This method is routed when the user requests to create new cards in a deck. 
-Only the deckid is required to add cards to a deck.'''
+
 @card_bp.route('/deck/<deckId>/card/create', methods = ['POST'])
 @cross_origin(supports_credentials=True)
 def createcards(deckId):
+    '''This method is routed when the user requests to create new cards in a deck. 
+    Only the deckid is required to add cards to a deck.'''
     try:
         data = request.get_json()
         localId = data['localId']
@@ -90,11 +92,12 @@ def createcards(deckId):
             status = 400
         ), 400
 
-'''This method is called when the user requests to update cards in a deck. The card can be updated in terms of its word and meaning.
-Here deckid and cardid is required to uniquely identify a updating card.'''
+
 @card_bp.route('/deck/<id>/update/<cardid>', methods = ['PATCH'])
 @cross_origin(supports_credentials=True)
 def updatecard(id,cardid):
+    '''This method is called when the user requests to update cards in a deck. The card can be updated in terms of its word and meaning.
+    Here deckid and cardid is required to uniquely identify a updating card.'''
     try:
         data = request.get_json()
         deckid = id
@@ -116,10 +119,11 @@ def updatecard(id,cardid):
             status = 400
         ), 400
  
-'''This method is called when the user requests to delete the card. The deckid and the particular cardid is required to delete the card.'''
+
 @card_bp.route('/deck/<id>/delete/<cardid>', methods = ['DELETE'])
 @cross_origin(supports_credentials=True)
 def deletecard(id,cardid):
+    '''This method is called when the user requests to delete the card. The deckid and the particular cardid is required to delete the card.'''
     try:
         data = request.get_json()
         deckid = id
