@@ -7,7 +7,7 @@ from auth.routes import auth_bp
 from deck.routes import deck_bp
 from cards.routes import card_bp
 
-class TestApp(unittest.TestCase):
+class AuthTestApp(unittest.TestCase):
     def setUp(self):
         self.app=Flask(__name__, instance_relative_config=False)
         self.app.register_blueprint(auth_bp)
