@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-#routes.py is a file in deck folder that has all the functions defined that manipulate the deck. All CRUD functions are defined here.
+'''#routes.py is a file in deck folder that has all the functions defined that manipulate the deck. All CRUD functions are defined here.'''
 from flask import Blueprint, jsonify, request
 from flask_cors import cross_origin
 try:
@@ -36,7 +36,7 @@ deck_bp = Blueprint(
 
 db = firebase.database()
 
-#This method is called when we want to fetch one of the decks, we pass deckid of this deck
+'''This method is called when we want to fetch one of the decks, we pass deckid of this deck'''
 @deck_bp.route('/deck/<id>', methods = ['GET'])
 @cross_origin(supports_credentials=True)
 def getdeck(id):
@@ -54,9 +54,9 @@ def getdeck(id):
             status = 400
         ), 400
 
-#This method is called when we want to fetch all of the decks. Here, we check if the user is authenticated, 
-#if yes show all the decks made by the user including the ones with private vissibility. if the user is not 
-#authenticated then only show decks that have public vissibility.
+'''This method is called when we want to fetch all of the decks. Here, we check if the user is authenticated, 
+if yes show all the decks made by the user including the ones with private vissibility. if the user is not 
+authenticated then only show decks that have public vissibility.'''
 @deck_bp.route('/deck/all', methods = ['GET'])
 @cross_origin(supports_credentials=True)
 def getdecks():
@@ -102,7 +102,7 @@ def getdecks():
         ), 400
 
 
-#This method is routed when the user requests to create a new deck. To create a new deck, userID, title, description and vissibility are the input required.
+'''This method is routed when the user requests to create a new deck. To create a new deck, userID, title, description and vissibility are the input required.'''
 @deck_bp.route('/deck/create', methods = ['POST'])
 @cross_origin(supports_credentials=True)
 def create():
@@ -127,7 +127,7 @@ def create():
             status = 400
         ), 400
 
-#This method is called when the user requests to update the deck. The deck can be updated in terms of its title, description and vissibility.
+'''This method is called when the user requests to update the deck. The deck can be updated in terms of its title, description and vissibility.'''
 @deck_bp.route('/deck/update/<id>', methods = ['PATCH'])
 @cross_origin(supports_credentials=True)
 def update(id):
@@ -152,7 +152,7 @@ def update(id):
             status = 400
         ), 400
  
-#This method is called when the user requests to delete the deck. Only the deckid is required to delete the deck.
+'''This method is called when the user requests to delete the deck. Only the deckid is required to delete the deck.'''
 @deck_bp.route('/deck/delete/<id>', methods = ['DELETE'])
 @cross_origin(supports_credentials=True)
 def delete(id):
