@@ -5,6 +5,7 @@ import EmptyImg from "assets/images/empty.svg";
 import { PropagateLoader } from "react-spinners";
 import http from "utils/api";
 import "./styles.scss";
+import Swal from "sweetalert2";
 
 interface Deck {
   id: string;
@@ -44,8 +45,29 @@ const Dashboard = () => {
       });
   };
 
-  const handleDeleteDeck = (id: any) => {
-    // todo
+  const handleDeleteDeck = async(id: any) => {
+
+    await http
+      .delete(`/deck/delete/${id}`)
+      .then((res) => {
+        const { id } = res.data;
+        Swal.fire({
+          icon: 'success',
+          title: 'Deck Deleted Successfully!',
+          text: 'You have successfully deleted a deck',
+          confirmButtonColor: '#221daf',
+        }).then(() => {
+          window.location.replace(`/dashboard`);
+        })
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Deck Deletion Failed!',
+          text: 'An error occurred, please try again',
+          confirmButtonColor: '#221daf',
+        })
+      });
   };
 
   return (

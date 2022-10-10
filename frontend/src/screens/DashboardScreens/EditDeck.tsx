@@ -1,10 +1,11 @@
 import { Radio } from "antd";
 import { useState } from "react";
+import { useParams } from "react-router";
 import Swal from "sweetalert2";
 import http from "utils/api";
 import "./styles.scss";
 
-const CreateDeck = () => {
+const EditDeck = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [visibility, setVisibility] = useState('public');
@@ -12,8 +13,9 @@ const CreateDeck = () => {
 
   const flashCardUser = window.localStorage.getItem('flashCardUser');
   const { localId } = flashCardUser && JSON.parse(flashCardUser) || {};
+  const { id } = useParams();
 
-  const handleCreateDeck = async(e: any) => {
+  const handleEditDeck = async(e: any) => {
     e.preventDefault();
     const payload = {
       title,
@@ -24,17 +26,17 @@ const CreateDeck = () => {
     setIsSubmitting(true);
 
     await http
-      .post("/deck/create", payload)
+      .patch(`/deck/update/${id}`, payload)
       .then((res) => {
         const { id } = res.data;
         Swal.fire({
           icon: 'success',
-          title: 'Deck Created Successfully!',
-          text: 'You have successfully created a deck',
+          title: 'Deck Updated Successfully!',
+          text: 'You have successfully updated a deck',
           confirmButtonColor: '#221daf',
         }).then(() => {
           setIsSubmitting(false);
-          window.location.replace(`/deck/${id}/practice`);
+          window.location.replace(`/dashboard`);
         })
       })
       .catch((err) => {
@@ -47,6 +49,7 @@ const CreateDeck = () => {
         setIsSubmitting(false);
       });
   };
+  
 
   return (
     <div className="create-deck-page dashboard-commons">
@@ -59,14 +62,14 @@ const CreateDeck = () => {
                   <div className="col-md-12">
                     <div className="page-header">
                       <div className="row justify-content-between align-items-center">
-                        <h3>Create a new study deck</h3>
+                        <h3>Edit a study deck</h3>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="flash-card__list row justify-content-center mt-2">
-                  <form className="col-md-12" onSubmit={handleCreateDeck}>
+                  <form className="col-md-12" onSubmit={handleEditDeck}>
                     <div className="form-group">
                       <label>Title</label>
                       <input
@@ -99,7 +102,7 @@ const CreateDeck = () => {
                     <div className="form-group mt-4 text-right mb-0">
                       <button className="btn" type='submit'>
                         <i className="lni lni-circle-plus mr-2"></i>
-                        <span className="">{isSubmitting ? 'Creating Deck...' : 'Create Deck'}</span>
+                        <span className="">{isSubmitting ? 'Editing Deck...' : 'Edit Deck'}</span>
                       </button>
                     </div>
                   </form>
@@ -113,4 +116,4 @@ const CreateDeck = () => {
   );
 };
 
-export default CreateDeck;
+export default EditDeck;

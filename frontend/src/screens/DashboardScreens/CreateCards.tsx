@@ -151,7 +151,9 @@ const CreateCards = () => {
                       </h3>
                     </div>
                     <button className="btn btn-mains">
-                      <i className="lni lni-pencil-alt"></i> Edit Deck details
+                      <Link to={`/deck/${id}/edit`} className="text-edit">
+                        <i className="lni lni-pencil-alt"></i> Edit Deck details
+                      </Link>
                     </button>
                   </div>
                 </div>
