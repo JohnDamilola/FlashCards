@@ -18,11 +18,13 @@ release = '1'
 
 import sys, os
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(1, os.path.abspath('frontend'))
+sys.path.insert(1, os.path.abspath('backend/src'))
+"""
 sys.path.insert(2, os.path.abspath('backend/src'))
 sys.path.insert(3, os.path.abspath('backend/src/auth'))
 sys.path.insert(4, os.path.abspath('backend/src/cards'))
 sys.path.insert(5, os.path.abspath('backend/src/deck'))
+"""
 extensions = ['sphinx.ext.autodoc']
 
 #templates_path = ['_templates']
