@@ -37,6 +37,79 @@
 <h1>Welcome to FlashCard’s documentation!<a class="headerlink" href="#welcome-to-flashcard-s-documentation" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<span class="target" id="module-auth"></span><p>import dependancies</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="auth.login">
+<span class="sig-prename descclassname"><span class="pre">auth.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#auth.login" title="Permalink to this definition">¶</a></dt>
+<dd><p>this method is used by registered users to sign in to their account</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="auth.signup">
+<span class="sig-prename descclassname"><span class="pre">auth.</span></span><span class="sig-name descname"><span class="pre">signup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#auth.signup" title="Permalink to this definition">¶</a></dt>
+<dd><p>this method is used to create new users and register them in firebase</p>
+</dd></dl>
+
+<span class="target" id="module-cards"></span><p>routes.py is a file in cards folder that has all the functions defined that manipulate the cards. All CRUD functions that needs to be performed on cards are defined here.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cards.createcards">
+<span class="sig-prename descclassname"><span class="pre">cards.</span></span><span class="sig-name descname"><span class="pre">createcards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deckId</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cards.createcards" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is routed when the user requests to create new cards in a deck. 
+Only the deckid is required to add cards to a deck.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cards.deletecard">
+<span class="sig-prename descclassname"><span class="pre">cards.</span></span><span class="sig-name descname"><span class="pre">deletecard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cardid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cards.deletecard" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called when the user requests to delete the card. The deckid and the particular cardid is required to delete the card.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cards.getcards">
+<span class="sig-prename descclassname"><span class="pre">cards.</span></span><span class="sig-name descname"><span class="pre">getcards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deckId</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cards.getcards" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called when the user want to fetch all of the cards in a deck. Only the deckid is required to fetch all cards from the required deck.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cards.updatecard">
+<span class="sig-prename descclassname"><span class="pre">cards.</span></span><span class="sig-name descname"><span class="pre">updatecard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cardid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cards.updatecard" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called when the user requests to update cards in a deck. The card can be updated in terms of its word and meaning.
+Here deckid and cardid is required to uniquely identify a updating card.</p>
+</dd></dl>
+
+<span class="target" id="module-deck"></span><p>routes.py is a file in deck folder that has all the functions defined that manipulate the deck. All CRUD functions are defined here.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="deck.create">
+<span class="sig-prename descclassname"><span class="pre">deck.</span></span><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deck.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is routed when the user requests to create a new deck. To create a new deck, userID, title, description and vissibility are the input required.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deck.delete">
+<span class="sig-prename descclassname"><span class="pre">deck.</span></span><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deck.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called when the user requests to delete the deck. Only the deckid is required to delete the deck.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deck.getdeck">
+<span class="sig-prename descclassname"><span class="pre">deck.</span></span><span class="sig-name descname"><span class="pre">getdeck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deck.getdeck" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called when we want to fetch one of the decks, we pass deckid of this deck</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deck.getdecks">
+<span class="sig-prename descclassname"><span class="pre">deck.</span></span><span class="sig-name descname"><span class="pre">getdecks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deck.getdecks" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called when we want to fetch all of the decks. Here, we check if the user is authenticated, 
+if yes show all the decks made by the user including the ones with private vissibility. if the user is not 
+authenticated then only show decks that have public vissibility.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deck.update">
+<span class="sig-prename descclassname"><span class="pre">deck.</span></span><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deck.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called when the user requests to update the deck. The deck can be updated in terms of its title, description and vissibility.</p>
+</dd></dl>
+
 </section>
 <section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
