@@ -12,7 +12,7 @@ jobs:
             - run: pip install -U sphinx
             - run: chmod u+x backend
             - run: chmod u+x backend/Documentation
-            - run: sphinx-build -b html backend/src backend/Documentation
+            - run: sphinx-build -b html backend backend/Documentation
             - run: git add -A
             - run: git config --global user.email "aadiasba@ncsu.edu"
             - run: git config --global user.name "Aaron Dias Barreto"
