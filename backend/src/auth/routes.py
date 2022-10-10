@@ -25,9 +25,9 @@ from flask import Blueprint, jsonify
 from flask import current_app as app
 from flask_cors import cross_origin
 from flask import request
-#try:
-    #from .. import firebase
-#except ImportError:
+try:
+    from .. import firebase
+except ImportError:
 from __init__ import firebase
 
 auth_bp = Blueprint(
