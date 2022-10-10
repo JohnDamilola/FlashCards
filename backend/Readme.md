@@ -35,6 +35,6 @@
 
 5. ```git remote add heroku https://git.heroku.com/flashcards-server-api.git```
 
-6. ```git subtree push --prefix backend heroku api-responses-cors:main```
+6. ```git subtree push --prefix backend heroku local_branch:main```
 
 
