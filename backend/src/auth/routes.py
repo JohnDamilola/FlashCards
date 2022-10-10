@@ -21,7 +21,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-from flask import Blueprint, jsonify               '''import dependancies'''
+'''import dependancies'''
+from flask import Blueprint, jsonify               
 from flask import current_app as app
 from flask_cors import cross_origin
 from flask import request
@@ -51,14 +52,16 @@ def signup():
         password = data['password']
     
         user = auth.create_user_with_email_and_password(email, password)
+        '''if the registration process is successful, this message is displayed'''
         return jsonify(
             user = user,                            
-            message = 'Registered Successfully',    '''if the registration process is successful, this message is displayed'''
+            message = 'Registered Successfully',    
             status = 201
         ), 201
     except:
+        '''if the registration process is not successful, this message is displayed'''
         return jsonify(
-            message = 'Registration Failed',        '''if the registration process is not successful, this message is displayed'''
+            message = 'Registration Failed',        
             status = 400
         ), 400
 
@@ -72,14 +75,16 @@ def login():
         password = data['password']                   
         
         user = auth.sign_in_with_email_and_password(email, password)
+        '''if login is successful, this message is displayed'''
         return jsonify(
             user = user,
-            message = 'Login Successful',           '''if login is successful, this message is displayed'''
+            message = 'Login Successful',           
             status = 200
         ), 200
     except:
+        '''if login is not successful, this message is displayed'''
         return jsonify(
-            message = 'Login Failed',               '''if login is not successful, this message is displayed'''
+            message = 'Login Failed',               
             status = 400
         ), 400
 
