@@ -85,6 +85,10 @@ Please refer to the [Contributing.md](https://github.com/JohnDamilola/FlashCards
 
 Email any queries to the contributors -
 [Swarangi Gaurkar](sgaurka@ncsu.edu)
+[Kritika Javali](ksjavali@ncsu.edu)
+[John Damilola](djbabalo@ncsu.edu)
+[Aaron Dias Barreto](aadiasba@ncsu.edu)
+[Leo Hsiang](yhsiang@ncsu.edu)
 
 ## Authors 
 
