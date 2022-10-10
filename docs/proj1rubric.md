@@ -8,7 +8,7 @@
 |Number of commits: by different people|3|https://github.com/JohnDamilola/FlashCards/graphs/contributors|
 |Issues reports: there are **many**|3|https://github.com/JohnDamilola/FlashCards/issues|
 |Issues are being closed|3|https://github.com/JohnDamilola/FlashCards/issues?q=is%3Aissue+is%3Aclosed|
-|DOI badge: exists|3|https://zenodo.org/record/7165120#.Y0McjuzMK3I|
+|DOI badge: exists|3|https://zenodo.org/record/7178754|
 |Docs: doco generated, format not ugly |2|https://github.com/JohnDamilola/FlashCards/commit/main|
 |Docs: what: point descriptions of each class/function (in isolation) |3|All functions and classes have descriptions |
 |Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|2|https://github.com/JohnDamilola/FlashCards|
