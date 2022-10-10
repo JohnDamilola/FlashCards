@@ -10,10 +10,16 @@ Welcome to FlashCard's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. automodule:: app
+.. automodule:: api
    :members:
 
-.. automodule:: login
+.. automodule:: auth/routes
+   :members:
+   
+.. automodule:: cards/routes
+   :members:
+
+.. automodule:: deck/routes
    :members:
 
 Indices and tables
